@@ -244,7 +244,7 @@ def build_html_page(results_by_keyword_analyzed):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Daily News</title>
+<title>EC NEWS</title>
 <style>
   body {{ font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f8fafc; color:#1e293b; margin:0; padding:0 0 60px; }}
   header {{ background:#1e293b; color:#fff; padding:28px 20px; text-align:center; }}
@@ -266,7 +266,7 @@ def build_html_page(results_by_keyword_analyzed):
 </head>
 <body>
 <header>
-  <h1>My Daily News</h1>
+  <h1>EC NEWS</h1>
   <p>Last updated: {updated_at} &middot; refreshes daily at 3pm IST</p>
 </header>
 <main>
