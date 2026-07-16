@@ -23,7 +23,8 @@ import urllib.error
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 # ======================= CONFIG (edit this part) =======================
 
@@ -65,6 +66,9 @@ SITE = [
 
 # Max number of articles to include per keyword
 MAX_ARTICLES = 8
+
+# Only show articles published within this many hours (filters out old/stale news)
+TIME_WINDOW_HOURS = 36
 
 # Turn AI analysis (problem summary + suggestion + urgency ranking) on or off
 ENABLE_AI_ANALYSIS = True
@@ -115,14 +119,30 @@ def fetch_news_for_keyword(keyword, max_retries=3):
             root = ET.fromstring(xml_data)
             items = root.findall("./channel/item")
 
+            cutoff = datetime.now(timezone.utc) - timedelta(hours=TIME_WINDOW_HOURS)
+
             articles = []
-            for item in items[:MAX_ARTICLES]:
+            for item in items:
+                if len(articles) >= MAX_ARTICLES:
+                    break
                 title = item.findtext("title", default="No title")
                 link = item.findtext("link", default="")
                 pub_date = item.findtext("pubDate", default="")
                 source_el = item.find("source")
                 source = source_el.text if source_el is not None else ""
                 snippet = item.findtext("description", default="")
+
+                # Skip articles older than TIME_WINDOW_HOURS
+                if pub_date:
+                    try:
+                        published = parsedate_to_datetime(pub_date)
+                        if published.tzinfo is None:
+                            published = published.replace(tzinfo=timezone.utc)
+                        if published < cutoff:
+                            continue
+                    except Exception:
+                        pass  # if the date can't be parsed, keep the article rather than lose it
+
                 articles.append({
                     "title": title,
                     "link": link,
@@ -225,11 +245,21 @@ def build_html_page(results_by_keyword_analyzed):
             analysis_html = (
                 f'<p class="analysis">{html_lib.escape(a["analysis"])}</p>' if a["analysis"] else ""
             )
+            published_str = ""
+            if a.get("pub_date"):
+                try:
+                    dt = parsedate_to_datetime(a["pub_date"])
+                    published_str = dt.strftime("%d %b, %I:%M %p")
+                except Exception:
+                    published_str = ""
+            source_line = html_lib.escape(a["source"])
+            if published_str:
+                source_line += f" &middot; {html_lib.escape(published_str)}"
             cards.append(f'''
             <div class="card">
               {badge}
               <h3><a href="{html_lib.escape(a["link"])}" target="_blank" rel="noopener">{html_lib.escape(a["title"])}</a></h3>
-              <p class="source">{html_lib.escape(a["source"])}</p>
+              <p class="source">{source_line}</p>
               {analysis_html}
             </div>''')
 
