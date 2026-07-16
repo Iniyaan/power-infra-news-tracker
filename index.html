@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Daily News</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f8fafc; color:#1e293b; margin:0; padding:0 0 60px; }
+  header { background:#1e293b; color:#fff; padding:28px 20px; text-align:center; }
+  header h1 { margin:0 0 6px; font-size:1.6rem; }
+  header p { margin:0; color:#94a3b8; font-size:0.9rem; }
+  main { max-width:1000px; margin:0 auto; padding:24px 20px; }
+  section { margin-bottom:36px; }
+  section h2 { font-size:1.2rem; border-bottom:2px solid #e2e8f0; padding-bottom:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:16px; margin-top:14px; }
+  .card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px; position:relative; }
+  .card h3 { margin:8px 0 4px; font-size:1rem; line-height:1.4; }
+  .card h3 a { color:#1e293b; text-decoration:none; }
+  .card h3 a:hover { text-decoration:underline; }
+  .source { color:#64748b; font-size:0.8rem; margin:0 0 8px; }
+  .analysis { font-size:0.88rem; color:#334155; background:#f1f5f9; padding:10px; border-radius:6px; margin:0; }
+  .badge { display:inline-block; color:#fff; font-size:0.7rem; font-weight:600; padding:2px 8px; border-radius:999px; margin-bottom:6px; }
+  .empty { color:#94a3b8; font-style:italic; }
+</style>
+</head>
+<body>
+<header>
+  <h1>My Daily News</h1>
+  <p>Last updated: 16 Jul 2026, 08:47 UTC &middot; refreshes daily at 3pm IST</p>
+</header>
+<main>
+
+        <section>
+          <h2>TANGEDCO OR TANTRANSCO</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxOaWRXeWpsVVVpS09ycWthNXZrdXd0N01TY0YwSUxpVFJLbVRfQjBHN1hjUVRGT2RsM29YUmlzX0lpTHJGQjI3RFVyeWNaWGZLMXcyWHJKMlpPS0FfSXhaR3JwR0Q3d2hrM1FjWEZsOEJac0pmLVNhdHBmb2ZCOU9VTmtwWEJvcTUzNG9jemY4UzlxckJrZlN0b2pmLUJlSjZqWkN3ZDVUWmp2c1lUV19ralQySk1zVld3LVgxZUJQQXhCUXd0YWJzbmJVRzVlSWRJY3VuM3ZWcFBNbGEtMnBhSGR6RF9fWlI2cEZoSVFONzTSAfYBQVVfeXFMUGNISDNXZ3A5Q1U3OEVfU1Nfb0tGTlVsRUJTZkxDMG0taHJydTNubm5DSWZXWFc0UDE0QXZSM3ZFWEowT18tN1hMQzVWRWtGYVZlWFphR19oZmY2WFlnLXZSSTRQdzV5SDNFM0xjSmdaVVQxcFlva0NrWEdVNzNDREZ6RUctUGYtNHVIQzJSeHpoQ09tU3hfVDNhZE40SVdVWUJnaXd6MjZjck9yNzdmTldqRnIxV010ekFjUUx0amdhbk5JanYtRDVaV2FaT3l4OWVHck9wdFBIcHZpMnVwamxBY3NDajRRdF9TOXFOMlpQdFA0OVh3?oc=5" target="_blank" rel="noopener">TN govt transfers senior IAS officers including Supriya Sahu, J Radhakrishnan, Umanath - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">This news details a major administrative reshuffle by the Tamil Nadu government, transferring key senior IAS officers to new departmental roles. Stakeholders and organizations currently working with these departments should identify the newly appointed officers to update their contact channels and ensure continuity in ongoing projects.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMijAJBVV95cUxPc2Z3Q1kzd05PNWNxcWVwQk5lMXJaT2pzeW5CWUNFbldvR2daSkF5Rmk4VWtrYkphd2dmUkZjQXFJc0tpRU5uSW9GQ3dlMWNWWFBFVXZ3MkgyM3VyajhESnlTUDBKdDAzSV9kWU9pVGpTa2kyZGV5ODRFc0t4d3NDbzRGVWVTNktPOXNnY0VkNHRpejJRQ3BoZUQzMzhyYjE1M0hlNUFzVVQwVHVwMXR2cUZaTFVGbGxZbTBkX3pTZ3g4S0lKQV9BM0tjdHRCM2ZKcG04LW9MakgtUDI2UUtrOUpIekVFM3kwY0drblZxQk9tb0dsMlBudHNONVZXTndUcTk5QWhhWHlyY3FI0gGTAkFVX3lxTE1JRElMcElObFJQWlU3T3V1Rlk2TEU5LUlTS2Vsek5jQ1gwZURlRkJMR3JMNlpTdUpNdzhEeFJfUlFRSFFOSEVuUHptUWRodGZ4VFlRX3VtWUhQMGlVY2luREl2QjluUkJ0OFZvMUswOGhac0ZyZ0RGRVpaYTUwcWFLS2d0aVN1MzlVN0ZkdmNFWDZSNjEtWFJiYWprUDZrdnlmcVU4VmkzbC1TbEtidk9KcVl1TElmZUpYN016X2t2M19FMlVwMUFxY25Eal9hVUdUQjFRSnQ5WFhxeVJyY0QweWNic3dGRmF4enNBal9OWjJSbFhvNGkyOFJKX1BCamJqUUZGR0pHcDRRLVFiQkRYamxZ?oc=5" target="_blank" rel="noopener">Tangedco and Tantransco officials instructed to maintain uninterrupted power supply during VVIP visits in the State - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">The news details instructions given to Tamil Nadu&#x27;s power utility corporations to ensure uninterrupted electricity supply during high-profile VVIP visits in the state. Local residents and businesses in areas scheduled for VVIP visits can anticipate potential localized grid prioritization and should plan any power-sensitive operations accordingly.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOWEV3V05LbnItOGZsWmFCeWV4NnhfU0cta3lUTVB2dzZRRmNRRlNWVld1ZDNMVllDUVpVLUR0aUo2ZG8yY3NNLXhGZ2tzelZ4Mk9wRGt4dUowTF82QnNnUE1nNXVuWWcybUNrSjNtYjJsRG04cmR5d3JWRDJjMGc0M0VfdXZMc0w1b0l0TzhpdHFTSG5XVUMyTDd3M0lIbTR1YkVuSUVBalRCVUhZbjRBbUtn0gG3AUFVX3lxTE5EYTBjWFd3a255dDg5dVBpbzhzWnRXMzZNT2hOWERhLWJYYWNGRFhJRWFNeFBOMVNudmNLWktfTnJWNjlaRkZ4anlWQ3NNamY0NHV5dXhaODhyYzZKZ2lGREsyLW5UdFYyVzdXMk5aZkJxRVJVRU8xV2kzcFJFVWRmWXZnSjQ4ak1ncDFlZFJBQXlpT3c4ZElrdGxxaWRjQ1JCOWt3MXdUakJ6eHF3RGViakNKOFJMcw?oc=5" target="_blank" rel="noopener">Tangedco splits into two corporations - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNWEpVNWdjZF9Wd2tiMDdXMlhfR3B2VlJhY0x5Uks2VWxPaHZPVlpfWFNYRjBoU19QcS1DYnJ2c0xTVTRsWS02NXY1amxiQm8xZGNRUXJ1aDJnYXFScGJqWGQ4MWtfMmg3ZTdjNUVyOE9BNVoxZzhoeENjVEdrWmYyQzJzT3FINmQwTS1aWDNuMk5LcVBQb2JVVktrN3hVTFFFNXF0MFNaU3VabU9ObGZvcExlLXlqeTloeVV3VnIyalVGWEN6bVJ5ZW04dGJ6SVZw0gHXAUFVX3lxTE9OU0VEYjU4THlZMjhyaG1jQkEwN2FKSUVhQjFJNDlWQ3ZJbmh1QkFZcVh4RzVON2lEMURrYzlOLXpaT0c0TTlXZmM0a1BiSU9nN3h5NkFQWHd5YUhBbUhScmpRTnl0YVpVeDhTaHIyY1BweHctUXBvOGtPaGE3SDZKbVF6blNuNFRSTjN6ZjBVbUFhcjNFNVlIcml0VVhuZE9xYnhPXzZXTWlyN1REbHhTbDV6Y2ptcVZRaXdYSDRJMlZiMjBTX2s5dzh3YjloT3Q4a3VLWWtr?oc=5" target="_blank" rel="noopener">Tangedco clarifies on multiple power connections for a single house - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPU0JmYnZVNkc5VXEtMFdiRDFyUVBlWmRleExrb3oxclR4QXhoX0tTLVU0YlBzbjk1czM0WlZFTE9DYV9RT2tJeGF0OVZxeUNrTEhSQ3BKamtFcEl2bmtWZ0xUOVF2T05ldGloUzEyWi1hS0RMTkxndTFWYXZXcE5PZHlYcHpQS0hZZGNIU3A5aTZ3YmpBQTY5Zm5WUEtlYzEwVVVVRFBwQmVTdHBkYzNhcW1LTTJCUjjSAb4BQVVfeXFMUFRFc1RoLWs0Y2tEN2UzZ2NXQUpuUmVZRmNUaFhDQUJTaEZqVG5GcTJxdGxqLUttM09PeE9idkVNRk9hd3FGZ2Y0a3N0QzRDeWJ1UXBNZlNMcXFRUlJ0R2c1dzZaUDVoU19zVFp5MEZUU3JCd3owcjZ4UHhhbnhiRW8tWVVNM1g2NWV5WjhPdFpkOFdwdThmeU96d1lzRm43cVdVbklMcERrSDkwZnRJRU9jdUdpRGl3eEFlOUtzUQ?oc=5" target="_blank" rel="noopener">Centre gives its nod for T.N. to rename TANGEDCO - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxORjQwUEdYZXJYeDl1S1FsOXYyeUI4VDFVMVVUdmJabVk5N0pZWjZ6c2FJcjdHRUFyb1U1YjhKX2dlZ2ZoY0ZRZVRhZHN2R09LZ0RLcW5TNGtVZHZMbmJQNHNrNFRzaXB6Wk83X3plY2NJYVdVSHRUMVU0U2dfNHpCSE1sUU1MOTBHa0MtWVpYV0Y2UE9lbDJyTkZqWUlYMHJlVzJhWEdoZmVtUXlqRk5JS0E4WkxEY1NaaUJlZkoxRDB3UEx0NGZuQi0xbUxQNkpNNHRzazZoVlY2YmJIeVY2LTRR0gHoAUFVX3lxTFBKSEg3azF6cHdRMWY2VmU4SkJJbEZJUmpSZFlVNEhDZWIzRm1QdkdmX1BXRmRuTmpPM1hEMGxHZDV2d2VjbVJ4clJZaTF1TmtPekRXUURoazlUMlNRX1JuTFc4dWdYaWdnLWp0amNFZmpacXZNRU5wUXFycjJhd00tMTh4NnlqQndxUWUxd0ZXOFZEdTNsY0trRklqQWhKd2hfUHlMc24tWm1NSEExdy11TnNGQ2lBNVpudUVqMS1lM2E1bjVuTm1BNUg3aHhQYTBHejdHMGNBbndSVXh3TFp3dVU0VjJ1dmg?oc=5" target="_blank" rel="noopener">T.N. forms new green company by merging TEDA and Tangedco’s renewable energy wing - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPek1NMTNlNXJNUHM4V054VHBmcS1PSEVrcEUySjZqbTBpMkpiQmRkV0czelcyazIwWGN6NlBYOVdzN3lHZThheGRzenpjWl9QWlJ1WkZwUUZLNlFfR016UFBDRGlqQ29DOFBqN2dvZHEtMnM4WGdvN3BTT2wyM3BWZVVGMldRdDdOMmRqVDc1TGM2UkJka2l3UG96U3l4el9senJheGxuUFAwaTM0ZTM00gG0AUFVX3lxTE5TQjViUWdzS001OUJLbTVvaUxyWEctV1hZR0pyMzI2bjQzaXUyOVhNNHhSVlpEam1RRUhjMjROSjBPZndWQTNDbjl0eVcxMmRoTUdST3RwNFpVdkExd2tFSjJQV05QcVFlTkR1RHNkUnMzeUV5OWVxZGFMT1pfUWhyZVBqUTdkNUJ0ZzBfRWY5dFNzZVRId0l4MWkxenVYdUVKaF93bXFaYlBHSFQ5WVNrRGRPTQ?oc=5" target="_blank" rel="noopener">Drop move to privatise Tangedco: EPS - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMipgJBVV95cUxNRnZVUEtvZ3YzaTU4Sl9pM3NoT3pXaFl0dG1kLXItamFnalQ2SmVXbHJOOU1IVUVnZDhQVC0wX0gyQ0NVVEdiUlI5Y25OZHdfM21UazFneE5kVjR6SVRld1JMdXFzYnFkdjRQR3NSNlotTkptZ0hibURfR2pXcS1xZDdNdDRvNy03czd2WG05OXotNS1Yd2FVWXJNcW1UR0RnTEtxamtIdkdVSzFFa2FGRlFzOHI1ZU42TnYtZGVqMVQyWVFIM0hUbmZ4VldyVEhvRkl5ZWgwX3pHYkpOdzJ0VzJKUnhqU1hIeFlXZTZrRlFQZjZqSG9MU3hJR2RidDd5dHVRS1FSQ3hjOUZaZ0o2VDdKQWhsMXpFeGRMblZVbzlLTXdEb1HSAasCQVVfeXFMTzBhdXhvZ05tOWdBbjFQOGlnRGJkdWVfN05UUVdWNm56X2hJbW1TNHVWU1NGWnA0ZE5rMHgtUmlYV0EtTU5OeTdqbHNicWNHVGRYMVlEWDY1UnVUbGdhQ0htc251aDhrMTd0aWNrNW9WV05Nb2MzcG9MbnBPNzhwOFAyQlBnM3FYN0VBTHoyUU1xSmlEUGo3VmtVOGdIcG9jMk9WczVidUdpdTR0WXVhRXVBRlBrVlJzLUFXWXJ0WjVKLTFFakNFOHlnUFFSV1RKNm5QWGNFYVNXbHlCX1NST1RvQkVIUU54b01JWEZBOVV2akRXb05UdkI4T2lETTFnckl0aTJ5VU82XzJ3cENia2xSbUppUURFY1QtalVZM0tlR2NRdHo2Rm05aE0?oc=5" target="_blank" rel="noopener">Infosys faces setback in Tangedco electricity bill case: What is the dispute and what it may mean for oth - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>power transmission Tamil Nadu substation</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQeDEzM3Bud19kZU9pT1dmWFN3ajN1clZ6clVFSFZjb3lSMlpMX01GMzdkTmdzMHA0OEh5X0pxb2FVQkxnMlBrd3A2d09UZFlwaEZKTG1BWjZZWkk2U0pJRlZDdnY5YWs0REU1N3BiUExIVnBaQVcycnFmRWh5VGpHZklfSEE2MXh5TGptWWxWdHQwSHdOQ1hRVUdPbEgwNjBoRXI2Z3NXdXl4LVlXeUlmWnBFRGFvRzRaWnFYNGhPSHpLRTduVFQ2R25aeHJScVN2enQtM9IB2wFBVV95cUxNSzdmazVYR1NZRk9GSlRiVU5JeFhVREFBSzZOOEVGREJ4aHFvbkRSZXl1NTFSaHU3TUViQnJ2MHdWNG9NMGRyb3k5R3JwSFFRZVNXenJHZ0sxNHNhZUdvY3JrRzhkMkRFNDZrMkQxYVFmdWkycFRZTTlURWpVSXY5Umx6VzhBMUxzZTRFTUFWX0FCNWVMelJvR00wZlY4Wk02U2xSWXZ3aW1ZTVpuTjZUR05KYnJKd1NEM3VBN3NtS2xia1VkQzRFNFJvZEJUNjREUl9OZmFvYkJVdGM?oc=5" target="_blank" rel="noopener">Power distribution network in Chennai, nearby districts set for an upgrade - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news reports on planned infrastructure upgrades to Chennai&#x27;s power distribution network to improve electricity reliability and prevent frequent power outages. Residents and business owners in the affected areas should monitor local municipal announcements for scheduled power maintenance outages and plan their activities accordingly.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQRmdfVjloV0dkeDZkY0tmLTFrOXFIVlpWRUVxVjhNWjhMczlHejJPcENCYXR6dUtPNkFSN1N3ZkdXcXpJZTBrUmJxSVlUT3oySUZmMjZEMVJ0TFJJMTN2T1d5eVpBX01QZUdOZG1jTWpTMy1ydE9mM2VPUmRuLUVsUFhVei1XNHo3a1gtQ3djQ0ZxX2pNTF80MFVnTlVvd0F1Q0t3NUtFTXQ4ZXRFa2dqMGlzMVg4ZEFaSUdsYThqbFMyakhRLTIxaEZUcm0tdW8yb1E5eExR0gHcAUFVX3lxTE9seVFRR0JoVWhCbERTWjVOQWloZUczdm9QSnhxUnU0NTloeUFlSXNiUkJkRHV2akYtQTl6ZUpmZnR2SFBYdmgtaFJ4dW0tTTNVNnlka29UWWxkTEktV1p1dTZ1S3pmZ1JFTTNqcjdjdC1sUUkxelhZdWZBMHNpOGNqR2JGelJQQzNrTnpqOG8tZ2t4bHhWVkFNMHZaaXcxSEJpc1RlNDNwT2FCM1VGckhUUXFPY216X096azE0M2dsZDQ5SWVNblNnMDYzcGcxcUxxUWstdTlyRWdqZHo?oc=5" target="_blank" rel="noopener">34 electricity substations to come up in Chennai, three neighbouring districts - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news details infrastructure development plans to build 34 new electricity substations to meet growing power demands and improve grid reliability in Chennai and surrounding districts. Residents and business owners in the affected areas can review the proposed construction sites to anticipate any localized service disruptions or leverage the improved power capacity for future planning.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPYk1LU3FYM0VsUzNqcFdZWndsRk1laEdkb1hPLVpLQWhLcXdQMk1JaUFEeS1GZGo2OFBMMnk1eThLdGpIS0YzQzhqbnp1SV9GZmNGNnVlMkpySzZ3TTJaYzAtOFRKTnlnTnZiMl9EdnpUYWpoYzZUWGFDS0t3YU9zNE9YTWFhZzd0cUdpUlRvcC1fNmxNN0NWTFN1MXZzWXhDdVd4U2RYb2hEZl9ybHlvbnB4WTZybmR1bjBNUHNnZ0pSTXRRbHBGbjQxWmXSAdIBQVVfeXFMUG9BN1p6S1ZsUWswVEpRcTd0S1hCV0N2Y3lMXzM2TWh4YldDZUxZazNvTnFkSkhNcVBYdjlPanFSR1dkeEhMTVZPZEl2dEwzaE5VQTkxdEdjMlVaaURxaUthRnVpam9BQ0tsU211ZDkxUGNxMkxUcnotUy12ZW1veEl2UjNYMUpnUUpnQldJTldWNDNRRFFfd2RXQ0diZEpRU09ER3Y3Sy1UanRvamRUUDV5ZkFaUFdGNGFWTm9JYWRiNnZwdG45MXBmWGtRU05iNmpB?oc=5" target="_blank" rel="noopener">New power substation in Ambattur to cater to data centres - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxOZHF6OW94aUdQMDlXVTFTbnJ0ZE9FNzRiZ2NKNmotVklMeHdoSWhGM01CdDRzUmU4a3VJc05PbDNNYmZmUkpKcDJIS1hHQ2lfWndzNTZFQU5jR1BVNFVtak9RZUtmZC1wbFhCRUNrQWpEZWNtcVNPVldkVGRnZ3FGVk5ocVVKLTl4Ty04R2tjNFFMQjU2RTcyQTd6Wl8xTzFaVEF5aHNIRjVsbVVUYV9lVGJGRkV1TENWcUZjRm0wUTdMSjhIdzh0SzlfMVNhUUxwNHVoZEcyU1ZiUG5OWGt3RnBGaFBySFA3VGpr0gHyAUFVX3lxTE9Bb2RzQkgyRElVdkVJOGhwWUYyMFcwT2FITVVEV1ViaWZSX0w3OGUyYWhsbFd3RTBtbGNZOHl2dUNYb2xtS0pYQ3VBeFJIUzZUYXE2YkcwTUNuMldCTGc4RG1kSDN0dktEdjZWeVRMaDdzN2JuaXNPM195N2pMcDRIaHJPeUhQMEZaUXVKQU1GNmFxdVVnUGxoanJNcXJHNGIwS1ZWQ0h1MlZRTWdJWGttaGJrQ0ZEQk52TzMxVWR0VnEtLTYzVE1GbTFtMFhWMENBUzF1bzgtNkFfQ1BxTV9oN2I0aDdNVXpKUGhmZ1JKQmN3?oc=5" target="_blank" rel="noopener">Tanstransco gets nod to lease its substation land for battery energy storage projects - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxOU3d5V3R0Z2E4empOa2hDTHhhYWplSFhJZmhjc2ZIbVFHck40bUhHdVFnMU5SbHhOMjRwYW9lcFVxUFVJU2ZVUlNLZHhJWk1ud28xU0xuT1Vkb2hQNDNCNGVkNUl3eVJBd00wTjFvMWFDR2JWYk5MMkw1aDMzRzE1cHh0enVkVk5DdU1WSkgxZkpTSExYZWhtNTVGU29WNGRSaDhsWkxlZEtfbGRzbTdZLWtHVWxZMkwxNHhLdGp4cnlQdE9VRThqRVg0eURTZk5yVFRiaHNfZEnSAd8BQVVfeXFMT3cxVUdWUE4wQkpQSHRrOTRWNzk1dm9aWUhpb2tEc0N0dHE4VDVzTktaWmZmaXhaNUdJa1VrZ09sYlRmR2RFSVZSa0hSOHBqSUhMSmpEYlhXekRnLXBWMDdCaTFfU2JPcjJxLVpSRl9Hc05CeVJVbjNFUXZuZTVMUjB4X1RjaVhVTDJBX3hmSFB0S1g5X3JWbndfRTBEbjYzX0tsbG1NZ2hySTVMZnp6U2x2TXFDQl9MNDdVak9WVDNISnhxS0NsZUV4MEdzeWZlTUhOM3BUY09uZld0WGpUWQ?oc=5" target="_blank" rel="noopener">Tantransco begins laying of underground EHT power line at Mannarpuram - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNY0N6VmpRVlc0X3ZwYjI3M2g0QXFIYTllRFdpdjczMkFNN29iNVgtVVltTUFJUXh5MFYteTZYZ1JzcHFyeTlhdmFOeldTcVdYdm1feEpVdGRHUXBiQnVwOUdnMTcxOFh6VzRURnVqOU9ldC1BeXNCMDlvb1d3S3ZESnVjREN4ZE43ZjJwNC1lVDZlaVVSSWdXMzgyZkpxQ043UW1JblNoaEUzdjQ0VW92TkU5aHhTTHJHVkpiX1B4M2hxOEVLWGExY2NPTGZtdEVZTy03bzhiWDVQeDBGcjk1RmJHM3l1bXo2blFfbDR6enI5enh3Tnc2c29R0gGAAkFVX3lxTFBaUFlzdUVUdTNoUERIVU5RSk1VRmp5UnpJM010ZmRVX1dwSnBNZUtwSlJKUVZORS1XQjhBLUpzWklpTlZwSU9Xby15QkVmV2dnVC0xWHIwRmd4SkN5bW15RU8zSjdXZzNMdlI1b1k4akRXYTRWVEdZVUx3SWRCaXdsR3pSQVdHR20zdVV6VnpadmVteDNhYkpVbVpFMjc4TGVPaEUyTU0wWmZDRHR4dmp6OExTUFFsaU5sNXgxS3FGTEw5SlBaNGpnVVRMX1lyZWVEYjJQYW0zYy1acnlkbTlfZHd0VzNFN1hUYmV1eWFZSC1PcVloamRBWENIVTlmcUI?oc=5" target="_blank" rel="noopener">T.N.’s Green Energy Corridor Phase 2 project set to stamp its prowess in renewable power generation - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxOUFVoajRQdXpwYl9IZFZZVGJFeG1DQW5yQzNxRTVackhEVlNKdm5DbnE3WkhyUWJLME5xLTJ4S2NXN1RaYWc3aGEyNXhUcDlWMVZNLXk4NE4yNnd0cEZwZnlOQlBNYThxdFZmeTVUY1dObmdWeHNzVzRVZHM4MEljTGtFMDd3UlNhUEZJbF9ieVFGWEM0X0Jra2liOGxIblBVTlFLNHdMVUFOMmVBZjl4WE12OHRxWWdYaE13dnJaQmpDZWZCTlNTbjk2b3A1YXAwZWtTdG5Bc3JpYktmRE9IbXl6UkR3TDDSAe4BQVVfeXFMUE9Lc3h5V2JPM3dZZ29SX1QyNkh4bmJuSGExbTBPTHIzQTlzLVAxWGtiXzFxZlFEdEZrb19KZWZOZDE4T2xwNUQyWkozZ3BuQ0NHYi1JVEpLcnZOZUUwTDdIRXhkZ0dfN01lSXE1OFZxY0RIRjBodDNyWlhiM1dGSVhaZzBQaDFWRWxHa3oxaFhLdXR2cG5jbngzMDZDODc1WXgyUFVJQ0NYVEdmLVgyYi03NTJ1N2d1ME4xN0h4aXlhZDRYZTZLSm45VFpGd25nWEF0MUVRVGJCdnVYbmhGdjFUbi1WY0pSamNRZnNLQQ?oc=5" target="_blank" rel="noopener">Work on installing underground power cable network connecting Perumbakkam with Velachery substation begins - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbl9OX1psUnNHRkYtcEhzX0d6RWk1NEJVNE9MQlFzYzZHVjNNMGhQUURma0xBc3VoQ0xNS1l6RmRMZXVULTNrVnJadlNNeU9lOVFXbzFCYkY5VU5ieUtfbTNGakV5VzlhLXdERXA1RjhqakVLREFqT1F0dGxUb1hzNXEwczFnS2RDZUNheHl3OGtLdHV2TGxYRTJ3M0U0WlhWZnJaQUl6ZWZIcmNpMFh3SUpmWGtnd0JKVkFFeHFqRk5obHBGdWZoRjZ2UEExR0t6Nk5OazhxSdIB3AFBVV95cUxQNkhsZTRqMldMNjRSY1RjRkdTckJKNWQ5aGRYb3lteXJ2VUswWmdqai1TeFhvcTl2elZHNjI1a2d4bUtmejFNX28zdGU2Vmc0NTJZXzJGVF9GbUdMU3EwWTF3dUJrdmtsQ3k0RmR3d2ZjRFhMQjduY0hZbG9Nd2ZMZUZqc1NCdkt4cGV2WGZYY3JSaW9vVTczMEVxLTc3dk8xNS14ZWZ1d0tZWDBYMG1YVVROVGNlZzZYS2w5RGprRWhlQXQyVmczRUdUME9MM2xtTkdYZy1KX0psSTdL?oc=5" target="_blank" rel="noopener">Substations unlinked, cause unreliable supply - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>HT connection industrial power supply Tamil Nadu</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMiOEFVX3lxTE11TUVxQnV4aXZmMGg2TXAzV3Vjem1qXzdDbU44dzdEOGdiTmtKNU5TelFkTzJTc3A0?oc=5" target="_blank" rel="noopener">Get Latest News, India News, Breaking News, Today&#x27;s News - NDTV.com - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              <p class="analysis">(AI analysis unavailable: The read operation timed out)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPQVlpWXhXSzRMazNIUWhUcllmeVp5anlNUW4xejFBeTBRVDBEY0U1Mk1INWZxM1dsRGVxZ1NLamNVaVlmRVVtY2U5Zk56UGFfZkRWLTY2SDdMUUM0TUZuTUE3RDVWekxiREx6VkJEWHUzSEZWaGNST1h5VE5aNFJmYl9PbnlXSDRLblA2Y3pyVzBqRXAtd0xkdm5MZTN3Q0ZxeVFUbkc5eWdnM2xhZXhn0gG2AUFVX3lxTFBmZUJvV2g2cTQyV21aTkpFSUVtVHdycmZ0YTdycmYzRHJUSFNodGNTeURRd0F0YUhzOENJNk9wMWtObXBBT29UMHlLeDcweG9ic0IyUkVDd1F4Z24yVUJIci1vbjZXQzdsX1VHZ1FFNXNoMFJ2QmxxbEhiLTRJUTVjMlhyQmY4eDNzSURnZGVzdjJSd1VjWUZ3VUVzemFJTmF6WkVSRTlBaC00ZmNTc0dSRXpURHBB?oc=5" target="_blank" rel="noopener">The uncertain flight of Parandur airport - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news highlights the ongoing delays and regulatory uncertainty surrounding the proposed second airport project in Parandur, Chennai. Local residents and real estate investors should closely monitor official government announcements and land acquisition status updates before making financial commitments in the affected area.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQX1U3a1RSbW9OV2VEcWtYaTI5dEdobGxGSGlnRS1EcXozdjBvcmotOTlXa2ZUUkphbUNOVV9YTjNEUU9oXy01NlZiSE4ybERPeGFqWk9uX0NkS3dTMF9pa3NqYUx5cXlzcVpwMDR4UlI3TGhDREd1bGNEX3dKTmkxS1dXYjF6cExuVFhtS3lQT0FWLTlxNTVnR1NMZXE2dUdFMGUxbEdNRk5xd3dPakpBRHg2Mk92bXBYc2VlYTVjXzZlZ0dfWGhyOG5USUNBSXFVcEFBNFVxTXNRcDg?oc=5" target="_blank" rel="noopener">Fixed: Tamil Nadu: Fixed power charges nearly double for small, big industries | Chennai News - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxOV2pEWVlFTkJhaVJrUGJiempRdE5paDMtMHFOVEU4bUNEZ2xTdktOclJ3VnNzdG5kSkdhbUR1S09WOVJhZjhwNS1WX0dxNE8wWlFEQVBibW9qRlF3a1djSjUyNkdKcTd3OGhHc1Bza0lZUTRoZlhsLVlYaFpxeUVkTXVQS3oxenMwUnYyZm1OYUpoUFRQRDZUbjNMaWUtV1JIV0Z4dkVTeXM5bkg5eTZRV3BTaTl5aEtmOFMxQkVKdThkc2pYS1RVc3oxa05adHF3MnJiQ1NFWWtDc2xCYmJ0VjAtY0JZbmxZRW9zZGZJSG5taTF4RmF5WTZZQV9NUk1zS0V0WWlyTU1aRVHSAZICQVVfeXFMTnhqS0RONThJbEZDVlpEN0F1cUJSYVRyRE5xY3NzR1VpaF9PMkllZkVfOGR4Mzc5dDdhQzdBZFNsSng3aW9oTkZ2NWFxOGNCdFBGb0lNbUR6VVFOWnNPZXVmei1sVG82c1pfd0ktcEQzbHBscHhRazUtRXhZODVDZUdnNzFfTVhTVE5DcloyQ2pJWlF6akNBUkMydkNYZmt6WUMzWDV6cHRkc0JERjN2c0RzVmdoZkdHZDBSZTZ0d19kLWltQVA0VnJlaWdUZ2Z4LUcyM19jU0U0dDVCbDlSZGZqZjJwcGRwVjJpTjA1SFVVYUhiTm5ubWo4MFFsbm54QnZFVGFoU2JUTjdLQjhQUF9RQQ?oc=5" target="_blank" rel="noopener">Electricity Regulatory Commission allows customers to avail of up to 150 kilowatts under Low Tension category - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQclFWY3ZPRDNUSndlNWdFQlJxRm94OVNLR3pWeTRRanFmS19lMDBUeDY0OURhVndoeENHR2liZENyVkJvUzMzeV9GNDRqVENfZjY2UkZJcFVJQlFjN3c1VUhXbFl2VkxualVkWXhRQy1zREJPazBEbVF0aTdQTGlwZjVCT3VBakl1Y05wcUZ4Uk5ycFpqRUV0WldmQkh0MnhtWDlwSDhuZlo3cnJIc0VJOGhCOS1wOUxM0gG_AUFVX3lxTE1Ia1FvZFhXNF9Sa2tDaThiS1h4T3FGeVlkN0J1YjJDMUh6aURmeWpBM05ESWZIMVNQWkJQYVVOZjFnZzdnQ2Y3MW42RXhuM2dQaGxYY09LaFBxNmhncU42NDYwQmVUNTdwSE53czg2ajBCWDNUMmg2LVI4VzlrWElSQ3AwVjVYZGp4TFBESzN3aUdpSE5Kdm9vZDlQSHk5TVlfb1NtQTdzUnBsUEdUUzNudUMyaF8wSkYzcno0d29N?oc=5" target="_blank" rel="noopener">TNERC allows LT consumers to avail up to 150 KW - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxOcnQxLUlUSDRsXzdMdktidTVMWlROOGcwV3MtRGJUVkt4SjlmcExFdHVQRVhlOWpuZ0M5clVCRzJwandlX0hhYUNwZHhaNFg1bFRCSkcyWHZyLTlSc0djcEpZUDB2d01vU0xVc01kckMyTWd1UVFHWk5Ga3dCdEhrVHFzV1VlaVVVbV9sQ0VmNHhRY3RyVTZXcUs4UVFzQTRhbC04NjdOQnZTTDhiR1dVQmFfVktLNElTWlRHc0ZvbVFnNGVPOE04V1ZsMjZkR1dFYTdKaUR6Q21JNjJINWY3T1c5cGZZRW1hYmxOaTdR0gH0AUFVX3lxTFBXUWxoR0c3Sjc3a3dHY0hVbnZNVHR0aWtYZTNBRGtOc1ZOcmNCckZ4dzh1eklDdHVNa0RUWlk1aVh5dXJhbnZ0VVl5dzVqSEJibF9JZ0pqaWlUUkxJOXFRZGhpOEgxaDlINnpOaXRONkNXYnpqbkdQSHV0VXFlLURTWlpIOGZBZlNDaGRxREViYkk4cGIzVXp2TDJyVzlMc2o5SmNHTFlDa1ZUXzV6cjVGbnk2YUJhSVBSMVhKRDhWaUY1U3dKbGFqYzJRakRuOTR2X3NQS3N1Q0lQc2pGWjVMRUFCTWFUTEN3cHpaSWdGTnl4em0?oc=5" target="_blank" rel="noopener">TNERC amends regulation to enable transfer of electricity service connection to tenants - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQU0w1czNhZlpOMm81NzQxcmRuLUEyZGJZbDJiQUVSMnpiNmRBcTNueU44OEMtYzZyVFdocnF1Q1BYdVZsS3dPeUFuQW91MW1oSUlfeWRvMm0zS0JnRllKd2xYTEJJQTRZNFEyUVdseUM5dVNZeEtDUUc1OUp0TlZHWHJjM2RPdk5IX05nODA2R2Z6aHRrR2hQVzR5UUswbDI3eG0xSE12aWtEc3VLYnY5WHhsSE8yVEhwZ2tsRnNaQ011bkt6Ml9sYnR3MjBaQdIB1AFBVV95cUxPV014Y0VfWFBadzFZY0gxMk1mT1E2RzdDNUE2OXBZRFkyUkgxUmRzMVRPZFR1MVFqbWhZSVlWSWg1Y0UxNjJtRDJiRmlvT1lOcEdMaVhEY2phUnd2em5VSng5UEVHLU9PMW1WQS03Qk9oLWdpcktLUUx4Q2JVa0M3Q3Q4MkFEdU9IZ0pnN3pQYnFIdHVyMTc3NHVLcGNxUjRhQ1JqeFlGaFFyX2p2cmEwWmFIdEpaOTVTMW83Z09jZU5fcjlMa2lXajBYT0tTNWhTY0JCcQ?oc=5" target="_blank" rel="noopener">Home buyers allegedly being charged commercial tariffs by builders - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdXFWWEFNVXFBZlg1endJdzBrbDNaQUZ3b1pNazE3YnFQWTB6ZHViM3I4bjl1c1ZWMTRMNldoalZ4QWJOeVVGOHhKcmQzVVRuN0JCMjljUENJQ2tzQm84X2Q0TnpSNXY4VExyNFJpazJ1UmYteTRQTkgyZmszcTctQXgxbW1OcVVKVkpUcGhvRkNBMXFWUzRwd1hjLTNQM2JScE9EM3NHQkNtZzB0eFVDMjBScUYwdU5SYkxfNERESk9Xd2JuU0J4UHo4U0lmdkRFOVRiQnU5M1NrOGhCTDJsUmxB0gHoAUFVX3lxTFBnVlFuZm8yY1d0dFFud0hkYk9aSE55SzhxMzFYZENnT1lBVlJGXzNzbF9zQXNkX1Q5VUVua2J3MnZOdFk3OUMzN1p6aG5wYVNTTXlxTFlzOEs4blpWZUhKNUZ6ZkxQOWxTdWZvUU9kQVlCUHBreGljRldyYkptQXZzUU9BeUttTFlGYmV5VlJ6NWhhS3Q5Umdfekg4WWwxbkdYZUV3R0hUQl9DM2tVNnhkeHpmcnR4MlB5bk02V0xNOHctZHA4dWxWclRlSHN5ZzZQYUpjV2tJOVJQS3pUaWFVZUQzWE8ySDc?oc=5" target="_blank" rel="noopener">Industrial electricity consumers in Tamil Nadu demand reduction in fixed charges - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>electricity policy Tamil Nadu</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#dc2626">HIGH</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZFBRTEZEd3ljU2s1NmR2TjFSYTJVNk5YbEdjOHNIN0dCOU1qRjlzYkNKOGFrNk1hdHlHNm9kS0ZIczNCUzJKQ1dTZGRZbXowc09ucWk3dVZadlkwcW9kWTdNOHVWaVVaZFlzV0thRjZlZ3NYZklRMi1VeWJMaWVrcjlQcS13Y1JVNUlZTTFKalFudDNudlk1SFc5SHp5OGdUVDVWX3hZZUR6N21PS2w5cEdZN0VINFpkX0xJTlBJMFR0T1JpSDNOQWUzbzFlaWYxSG1DRVZXZ3dCMU5kOXd1U3VkdWVjWkdId3Q5MEtYM0hJd9IB9wFBVV95cUxOTllXVVp2YmdMWjhKZWoyQ2NfRUxsNndsNFh1N3lSTHJ4OWQwbUcybXFoQ1N1TzhMQ0NwWmRBdXpTdlhROWpWNHE4MHhLX3B2VDBNckxSdmVUZVZtNWJCYTlPa0xzSzFVZGFCZGJSbVlPS3NmV2gyWnJENUxZWE5EeWFXakJYWXE5blFIUFhZS1llUklPU1M5bjJTVzRUdlRINF9zTlJ3cjZtNm03eVBfZ0l1ckhwY24wY1NzT3lycnJzN09XVUd2V1lvbFZBMHRiYlVLekdRanE3b29CYUNsNHdtS2J4b1dLUzNCaVBPUEw3a3djNlZz?oc=5" target="_blank" rel="noopener">&#x27;Serious risk&#x27; to India&#x27;s largest nuclear plant after sensitive files leaked on dark web: Report - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">Sensitive data from India&#x27;s largest nuclear power plant has been leaked on the dark web, posing a critical security threat to the facility&#x27;s operations and physical safety. Security administrators and relevant government authorities must immediately conduct a comprehensive forensic audit, rotate compromised credentials, and isolate critical infrastructure networks to prevent potential cyber-sabotage.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMDcxMjFMLXBud2ZlZmx1R0RZWExqQXVSLUYxbWpodm5tUWtiU3pPZlNta01ja3hZVjZUMFdiaC03OE1Ya1htcWZWZFpMNFNtaGMxWUNEakhpdkp2Qlh6QmYtWmJtak83LVNfSUpyenRMUWNyYUU4QlFoTHdHbVc3SkZWTDdRUnpyaTV4dWJYRXZlVERibE9IbVdueEsxd19semloRlBXQnlGZEVjUU12U0VLM3REbk8yUnNWcmpkM2dMUy1ZcHJZUDNaSVpEVndZWjVVNGtNVTI1OTFqdGZyZnE3NWZJMkpESzVCbtIB8wFBVV95cUxPUmhiLVZZc2xLSWxtM3VleXBEVEkzT0NTOWdKQUZ3UUc2bjh1c1lNMGluT1NFendoekVPeE9ZQUo3RjNzUXdpelRydDFNTFVWSmhRbHR0RDJnVGJ3TUZack9zM0ZQUEZFbUQ0M1NYaF92MzJfbVZyQVdRVVdpUlhwZXhsN3BnY2h6YW5DUi13bng1Z3BDRldQSjVaNHZpS05MLW05dVR3ejFnU0M0RVpVT2pYOVRtbEVkMm1IWFV6a2RsVlpFa1FrZ3hReG56UktfdFRXOWFwSzkyYTV1cFo2MkxDV192WGZhbGstU2k5R1c0LW8?oc=5" target="_blank" rel="noopener">NPCIL denies ‘sensitive data breach’ at Kudankulam nuclear plant project - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news addresses allegations and the subsequent denial by the NPCIL of a sensitive cybersecurity breach at the Kudankulam nuclear power plant. While authorities refute the claim, the incident highlights the persistent threat of cyber espionage targeting critical infrastructure. Cybersecurity teams in the energy sector should proactively audit their industrial control systems and verify network air-gapping to prevent potential compromises.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMilwJBVV95cUxQa0pCbnlHOVplbHI0WHI3dENpQWJDODNqTkFwTm1yVHloQm9vX3JEc00tRHNpTU1RcXRCY1R2MEtKUWRadDdFUzRCWjY0UFphMHZWQTJ1bk9oVWVKdHV0Qjh4cTRnSXUyYThRUkRrNXBlaEQ5d3pmV0FVd3MtWXQ0cTU2eG5SSWE4OHEwaDQ2RHFnWDNzVGJVWndiVi1MSi1COGVxbkV5V3AtelMxV2VQWFhwdm5vdUJuZTVnNFlwZ0FuazlvcTY1VlZZQmJyY0I5TElqRGoyNFZPeFZKVWxJRjFwOFF3M3FiU1pTX2JZWE5GQ3NQd2dudzdOcy0zNFBLajRaNHRZbnBsY1ItSm93NUV1ZHlnZTjSAZ4CQVVfeXFMTzV4TlczbXNoUkROYW5tdkVWcEZoOFdZLTFUMFdYTUwwTWhHM0MydGd3eW40X1F1c3k1RENKZ2JrQVQ1MDV6UnFZLXRxdFZlblJjYUkyeHFqODV6S0VoOEZNZGhXMEFjNTlxbmV2aTZfTmZhYnQzTkh6d3pYeG9mamR0ZHdHUTByZzRjbF9Fb2xrZzNhSUdrZm9xZ2FSMTRLSmtsYTJOdlllR0VCMkFDc1otNVhkNExUNlhKZ3F5UFE5akU1bUxZRmFOWFpITEpidkEyendNc2lfUU1VYUFLbnJTRzhYTUtxWjkyc3hIQThya0JneWVsUHAxSk5kVDVQWEFlanpYQmdnQjRGSmgtQk5Xb09QZFdOVExZbjlKdw?oc=5" target="_blank" rel="noopener">UNESCO Award-winning restoration of Thukkachi temple in Tamil Nadu: a blend of traditional wisdom and modern technology - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxORTU5MC1qZFJZNjZqRUtuYnVuNUIyUW9FQUVnRHNDcnJXYTBMekpvZkJiUS01SWd3SFBUcDZHa0tXRG1Hdlc1SDhleXNCNE1Rbm5VMUZ3WklNbi1TUFpTNTRTVjkwZ2c1UXpCSFlIVURnU3JfeTBxV1k5cVB0TGVFYUpabkNnSWxpMnEyNmNGNlh6VENfelpiRGExdW9TUzZ3Z0lyQlRVMWsxaGRZTTZKR20zMXU4bm5RRWlFd0NXcmtUNkVHWW9SaVh0NHNlUWNaTU92YW4yS2xkUnJVcDFZbUpUZXRwZWlHVG1jRW5FX0F4LVkxUk9fRtIB_wFBVV95cUxOX2Rqd29oYVEyVVZzSlZIekZoaFYwU1ZqeUhhM0NOTFBUV3RWUmRNMkhRcjgyX3g5bmM2TXpmdHRrb2N1XzZHOVRnalUxRTJQUnBPWUdEMllBdjNRc3BETGNQeGZQald1Y1NwVlJzd3ZiQU5LaTJvM1VHMmlpSFpMblM5R2kzVXlvcVlaOVFaOXdvekhpOUZWTGFONWMwSkdrdmRGV05iMU9VX3F3TjBqSE5oYk53Tmh1MUQtUHN6TC00WHQ0LXAwNGNFSXlXUy05d3dBell0NVo4VHVyRmRSWWRmMXBhZDVCQUl5ejZ4UkNlVDc2MlNySm5PdWJEeHM?oc=5" target="_blank" rel="noopener">Kerala Home Minister Ramesh Chennithala meets Tamil Nadu CM Vijay, discusses on ‘Operation Toofan’ - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQVUJwdmFlUmZWSVhRbDVlOGNFcURvcGlUMVhHVk1MYVJRSWZCR1Z3ZUNCbXNaaFZtQWRlZmhiZTNhT2hSZ1cwZmxNR0c1LVdWMGl0NjI3d3pIeWhfcUZJLVlZcVZlbTVpLXVmZkx3TVBmU2l2aVhfSHpqdDdwV3JoaE5CNloyV0d3SWRPVWRQOTZ1YUJWTV8xcElUenJJMEnSAacBQVVfeXFMTU5YN1hmNXpoSkdWWXRFUmNJTWlMc3o0MHVtdkxkNnRBZW9hWVo0bUhVamlQcnlWSGJmSjU3STJiT082THhlcVZ5d1FUdE9NQXNZbVhSSG1UNXdueXNiblhLQ0ZRU2NSeU56Mm9mUUVXbUhBVGd5bmlLS0Y1V09jZjRpODl3WkhvSXM1c3VFcXJ3SkN5YzJSSzgxaUkxWkI4NWhzZmhYRmc?oc=5" target="_blank" rel="noopener">Nuclear Body Underplays Concerns Over Data Breach At India&#x27;s Largest Reactor - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxOaWRXeWpsVVVpS09ycWthNXZrdXd0N01TY0YwSUxpVFJLbVRfQjBHN1hjUVRGT2RsM29YUmlzX0lpTHJGQjI3RFVyeWNaWGZLMXcyWHJKMlpPS0FfSXhaR3JwR0Q3d2hrM1FjWEZsOEJac0pmLVNhdHBmb2ZCOU9VTmtwWEJvcTUzNG9jemY4UzlxckJrZlN0b2pmLUJlSjZqWkN3ZDVUWmp2c1lUV19ralQySk1zVld3LVgxZUJQQXhCUXd0YWJzbmJVRzVlSWRJY3VuM3ZWcFBNbGEtMnBhSGR6RF9fWlI2cEZoSVFONzTSAfYBQVVfeXFMUGNISDNXZ3A5Q1U3OEVfU1Nfb0tGTlVsRUJTZkxDMG0taHJydTNubm5DSWZXWFc0UDE0QXZSM3ZFWEowT18tN1hMQzVWRWtGYVZlWFphR19oZmY2WFlnLXZSSTRQdzV5SDNFM0xjSmdaVVQxcFlva0NrWEdVNzNDREZ6RUctUGYtNHVIQzJSeHpoQ09tU3hfVDNhZE40SVdVWUJnaXd6MjZjck9yNzdmTldqRnIxV010ekFjUUx0amdhbk5JanYtRDVaV2FaT3l4OWVHck9wdFBIcHZpMnVwamxBY3NDajRRdF9TOXFOMlpQdFA0OVh3?oc=5" target="_blank" rel="noopener">TN govt transfers senior IAS officers including Supriya Sahu, J Radhakrishnan, Umanath - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQRHR5dWQ2OU9iVEU5clkyc0JwUXZWQWlBc1FPYVBrZ0V4VE9HWExXVDFlMXFCbkVtWllMRWhWcUxseUszczZlNTl1R0ZaUXZUdGFRSnBpYVdueVFNSXJoN053UHpTRTlJSXFsRU5aY0d6WWx1dlNjZG1FWUdLcGloQWI5RmtuVllZem5WT0xJYUhibldRdTB6ak9lQ2hPMXhoS0lKNlR4VERPODVTcWVWOFYzOGlkWEp2YzJBOTRIcExIS2RHZjFzUGFqdXVtYmlyeUtaMUhDZnVzM3dW0gHiAUFVX3lxTE9HZHRtVEJYQTZyZzZ6RXQxOVpQU3pNLVpzS1g5Vm9hemplMkNYVUt6VW5DRmpWT2t4V25yM0RNWmNLNmJDajV1UjhTbHZ5cFpQNXNsSHJEZHdOaFlOLUJ3QThDSlFldlFzX0FxYVI2YjJEendRdnF0MXJObHF6SUNfT25rajlrallUcU9MZXViSGlPU3ZqbWVNdGpteVpIeVZIeHhYcnE2cGtwWlEyQUhDb0RCc21aUTF0dU1TMUZIanhyME9RRnVGd0gxeGpJME1QZ1ZmbE04VFYzTVBTWDRyTmc?oc=5" target="_blank" rel="noopener">&#x27;New language in class 9 stressful&#x27;: SC on CBSE&#x27;s compulsory 3-language decision - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMigAJBVV95cUxNQ0ZvZGZyQk0xRVIzYzJITHZ0VVNPWFE3Smo5VjMzRDJtUHdUVGtUNGxWQlFya3IzdXBXWXN5WGRRQm5mYTh1Qjhmc0loV3QycjNCTlhPd3lMLUVOalpnTm1GNXdxZXp1bXZrSkk1NWNxQ2h3cklEQTI2dE5NS095LXV2bllRd29VN29fUURpV2JTZXpBbkxOTTNPVFhZTFBOU3Azd0ZZc1FiUEtqUWJCTDJFZERnNkE4dDRSaGJaaER3a1U5WUhVOEwwRkVidzRaWmtSLXBQSG04aElsMUUtSjY2ZExPNjl3Q0oxSjRiSVFkNXVLUElqWDJBelE2aUpr0gGHAkFVX3lxTE1lYVR0R0ppZk04T1NuaXprZjZTX3RWYVVQUmFMcTlNZVJzQXRZRnNBbWktTDFDeUdpcmZzZVEySWgtcm45QTJNS2plSTlEeXFqaUdmY2N0ZWUzVDlzU1RNdTJxN1dvNVBxTWRVYUxESWJ6ZURLQTJsaFFRQnRQM2Y4djN0VFZUalhEcVg1MDZDcm1YaGVNcGlfTFZ3a3BHaFJ1ZXFsOC1JcXlFMFZ4WktXN3Q5cE9rZjZSRmo1WFptcGdkdzlCRks0RUwyOXc3bXdkUFg0OGt4Sm5LLUJ0SEtjYlVKc3pXN3FfZFNwMVBvUHQtV1Bubi00aTFaejM1aGhLSndydnE0?oc=5" target="_blank" rel="noopener">Tragedy at sea: Vietnam boat capsize survivors from Tamil Nadu recount harrowing moments - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>Tamil Nadu government order G.O.</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxORTU5MC1qZFJZNjZqRUtuYnVuNUIyUW9FQUVnRHNDcnJXYTBMekpvZkJiUS01SWd3SFBUcDZHa0tXRG1Hdlc1SDhleXNCNE1Rbm5VMUZ3WklNbi1TUFpTNTRTVjkwZ2c1UXpCSFlIVURnU3JfeTBxV1k5cVB0TGVFYUpabkNnSWxpMnEyNmNGNlh6VENfelpiRGExdW9TUzZ3Z0lyQlRVMWsxaGRZTTZKR20zMXU4bm5RRWlFd0NXcmtUNkVHWW9SaVh0NHNlUWNaTU92YW4yS2xkUnJVcDFZbUpUZXRwZWlHVG1jRW5FX0F4LVkxUk9fRtIB_wFBVV95cUxOX2Rqd29oYVEyVVZzSlZIekZoaFYwU1ZqeUhhM0NOTFBUV3RWUmRNMkhRcjgyX3g5bmM2TXpmdHRrb2N1XzZHOVRnalUxRTJQUnBPWUdEMllBdjNRc3BETGNQeGZQald1Y1NwVlJzd3ZiQU5LaTJvM1VHMmlpSFpMblM5R2kzVXlvcVlaOVFaOXdvekhpOUZWTGFONWMwSkdrdmRGV05iMU9VX3F3TjBqSE5oYk53Tmh1MUQtUHN6TC00WHQ0LXAwNGNFSXlXUy05d3dBell0NVo4VHVyRmRSWWRmMXBhZDVCQUl5ejZ4UkNlVDc2MlNySm5PdWJEeHM?oc=5" target="_blank" rel="noopener">Kerala Home Minister Ramesh Chennithala meets Tamil Nadu CM Vijay, discusses on ‘Operation Toofan’ - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news highlights interstate security and law enforcement coordination between Kerala and Tamil Nadu regarding &#x27;Operation Toofan&#x27; to address cross-border crime. Residents and travelers in the border districts of these states should stay informed of local security guidelines and cooperate with police checkpoints.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNN1k4QnBYRXE0ak9SY0J3Q3NMUWdYRm9lNmRhUmJaUUc4LVA5SkR4bTgtUGpxX19BTTRWR2dZN3FwWjdKXzREbHdqWDgxRnJ5eEFkdC1CVXQ0dEpnR2FIQnlVTEZURVR4SE04QlhkTXg1WmprZnA1Rll3WmNfYVhrRG10bG1DNUFvWTBzczdDX0FncGJ3YnVLUzg0ckhBOUR2WnJVU2x6dmZycTZRNE1YVTFSYlROMTdzQVHSAcABQVVfeXFMUElHdmhQaUM2STBKWkkxbEhfVUFNVV9PbU82V1B3UW9LZXJmY3ZzSDBxdzEwaTdKS0NZdkpuX2JnckhoanhGc2MwUy0wTWg2MGR0RWtaX3hvM3VSWHRDc3l1VlRVcTQyVGlCNHh1RnJjZ0U0NEFOQkdnVkRMNjdqcEJHR1JiVW1ZT3lhaURkOFZ2Y01IdjRObjNSWFFpdG1MU2hVNk9pX20xNDlLaWJkRDVYN3ZUbjFXMUhuSld2UXVR?oc=5" target="_blank" rel="noopener">What is the row over Karur ‘temple land’? | Explained - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This article explains a legal and administrative dispute regarding the ownership and alleged encroachment of land belonging to a temple in Karur, Tamil Nadu. Local residents and real estate buyers in the region should verify official land registry records carefully to avoid legal complications or purchasing disputed properties.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMigAJBVV95cUxNQ0ZvZGZyQk0xRVIzYzJITHZ0VVNPWFE3Smo5VjMzRDJtUHdUVGtUNGxWQlFya3IzdXBXWXN5WGRRQm5mYTh1Qjhmc0loV3QycjNCTlhPd3lMLUVOalpnTm1GNXdxZXp1bXZrSkk1NWNxQ2h3cklEQTI2dE5NS095LXV2bllRd29VN29fUURpV2JTZXpBbkxOTTNPVFhZTFBOU3Azd0ZZc1FiUEtqUWJCTDJFZERnNkE4dDRSaGJaaER3a1U5WUhVOEwwRkVidzRaWmtSLXBQSG04aElsMUUtSjY2ZExPNjl3Q0oxSjRiSVFkNXVLUElqWDJBelE2aUpr0gGHAkFVX3lxTE1lYVR0R0ppZk04T1NuaXprZjZTX3RWYVVQUmFMcTlNZVJzQXRZRnNBbWktTDFDeUdpcmZzZVEySWgtcm45QTJNS2plSTlEeXFqaUdmY2N0ZWUzVDlzU1RNdTJxN1dvNVBxTWRVYUxESWJ6ZURLQTJsaFFRQnRQM2Y4djN0VFZUalhEcVg1MDZDcm1YaGVNcGlfTFZ3a3BHaFJ1ZXFsOC1JcXlFMFZ4WktXN3Q5cE9rZjZSRmo1WFptcGdkdzlCRks0RUwyOXc3bXdkUFg0OGt4Sm5LLUJ0SEtjYlVKc3pXN3FfZFNwMVBvUHQtV1Bubi00aTFaejM1aGhLSndydnE0?oc=5" target="_blank" rel="noopener">Tragedy at sea: Vietnam boat capsize survivors from Tamil Nadu recount harrowing moments - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMilwJBVV95cUxQa0pCbnlHOVplbHI0WHI3dENpQWJDODNqTkFwTm1yVHloQm9vX3JEc00tRHNpTU1RcXRCY1R2MEtKUWRadDdFUzRCWjY0UFphMHZWQTJ1bk9oVWVKdHV0Qjh4cTRnSXUyYThRUkRrNXBlaEQ5d3pmV0FVd3MtWXQ0cTU2eG5SSWE4OHEwaDQ2RHFnWDNzVGJVWndiVi1MSi1COGVxbkV5V3AtelMxV2VQWFhwdm5vdUJuZTVnNFlwZ0FuazlvcTY1VlZZQmJyY0I5TElqRGoyNFZPeFZKVWxJRjFwOFF3M3FiU1pTX2JZWE5GQ3NQd2dudzdOcy0zNFBLajRaNHRZbnBsY1ItSm93NUV1ZHlnZTjSAZ4CQVVfeXFMTzV4TlczbXNoUkROYW5tdkVWcEZoOFdZLTFUMFdYTUwwTWhHM0MydGd3eW40X1F1c3k1RENKZ2JrQVQ1MDV6UnFZLXRxdFZlblJjYUkyeHFqODV6S0VoOEZNZGhXMEFjNTlxbmV2aTZfTmZhYnQzTkh6d3pYeG9mamR0ZHdHUTByZzRjbF9Fb2xrZzNhSUdrZm9xZ2FSMTRLSmtsYTJOdlllR0VCMkFDc1otNVhkNExUNlhKZ3F5UFE5akU1bUxZRmFOWFpITEpidkEyendNc2lfUU1VYUFLbnJTRzhYTUtxWjkyc3hIQThya0JneWVsUHAxSk5kVDVQWEFlanpYQmdnQjRGSmgtQk5Xb09QZFdOVExZbjlKdw?oc=5" target="_blank" rel="noopener">UNESCO Award-winning restoration of Thukkachi temple in Tamil Nadu: a blend of traditional wisdom and modern technology - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNMmNwTW83OWlrUHdNZUI1aF8zTDdKZnUzRWVJOU82QW5IZWREN0lLSWx5cFUzZk5jLW9lejU0MEFrcXFGSndYNVhSVk5fTjJMdmtPWi15cEJ3RkV6WjlCQXVmWjBSRExoWTJFM1RSaGlLZVdRSjBUSjRsVVNpVlV6QzdsbENSSjE5SjZQVndIQVdMQVI1bmg5cGxXYmQ3cl9EYVBudmQ1eEFnczE3cnQzYnViTdIBugFBVV95cUxOV2xCSWFaT193WXdDQ2ZZU1E2VmpHampGWWNFc2VnSWl0SGhKOTN5T1Z5czRzdnFCTmVFSXV5NVVsNWZ2NVlTVFlFRUwzSnY3cFJmSE1qcWJrVnZzVUJxZnotNXhyYWxqUzZUV3Zjd3NLNVIwR2lMOWJWVEpnV1U2SjVmeHk2Zmt2M2tlaWtzY3pJOHZNcTZvTlJCVnd4Z2RaVEJYU1dfM1M3MUpkd0FySjVLUjFxSS0xZlE?oc=5" target="_blank" rel="noopener">Hyderabad native dies in U.S. skydiving accident - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxObDNfWjhWOFJyMDBqMmtjWmF3WkN0SzZjakZOYVFNZVU1OTNvbXZOUGpGczdFcnZqc3kwcEF4LXBiLVRDcTlJZnRqX1NsV25xMDVmNG1MaVRnZ3h5Mld4RUFhaFRRUEZXLUdKRzlCc1QxMHd0TERLWm1McmpUbVFnUWc4WXhOQUgyNi03dW80SmtUd9IBmAFBVV95cUxPUjcxQmF3Ni02Zm04UHc4M0duUUViTlVURXJzRW5WUFozSzVUeWtQRS1ndkpZZWh0NWZGWmtSRWh6U0FyRzRTY1d4b0ZnU2JpLUZsTHJTTEFUOWpZdlpLYWQtdEstcGF6UXdzWGpMcWhyT3hIMlVzRG1GeUNmY0pWOG5ZOFYtUFhQbzFFSnVoaEx3TmVjWHhvNw?oc=5" target="_blank" rel="noopener">Sonam Wangchuk Hunger Strike 2026: Why He Is Protesting - Frontline Magazine</a></h3>
+              <p class="source">Frontline Magazine</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOOUo2OFZiMTNtcGlvZHhUcFVfVUduM01xa3RGTENYR3pyTlNkMkd6aGVjOUUxclI2ZnFtNlJrWEZJWGNJa19FZGtxRW5tV0xHaHFfU2ZYWU5mMXE3NmNSOG9GUHhHZ2NZaFU0Skk0V2t2WFU4Nl9sZENYMlh0WUVaX1ZLM21YWmxIOGt6TkRnWE0zdzVheE5acUFlTjFiVVl2OHREOWMzLU0xM2NETnozcV83SlA1QTJYMU5OaFFEMWhEX0R0MGZ2c0pn0gHQAUFVX3lxTE5DaGZTSW9jUHZ4LVIwa29MOVB2Q3ZYczVCVzlHN0FaOFJSeG5IQks3V19JZjZ5TVV3VVNiS1BTOG54OVlleklYTXRXc0ZQYlROSlg2a3F6ZnVyajQyVUV3TzNKZnhVT1p6dmdST2RZeHZNSjNyMWp3SG50V25HVlRBbVdCVEQtZVJWNk1SZm5NZzhuVFJvN1V6QXFIMmlETDFYdktOUDNOMnVEMEdkUU1rWGh0LWhKZ0FwT2RzeWdLVXVqdGlBVjc5UVVCNmFSMWk?oc=5" target="_blank" rel="noopener">As Sonam Wangchuk hangs on to hunger strike, weight loss approaches 9 kg - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxPQzE1STV6Yy1IbHYyYnZ6Tk13eDN5cTVFNjVqRzNrcDBoT01XWkJPZjBpeEQ0d0dPVzk2ekNjbFV5ckRRTHVhTFRuNllnUjJKZFVCOUxyUEhzV2lxcE93N3N3VkVLQjJvOXNiZDV5OVhJOGZBVjRIMWktdG1wTmpDVGtfX3U0MlpCekpDTXg3U0hSMk0yTG9GTDRTa3gxVkhGT1UwTXdGNHJyRGN1RHExbWpXUlN2RlI2azVqOFJpOHhZWlM5d1ZWYklPVUQ5YU5Bd2E1WlJzWWxZOUpxWnI3QkJTQkRVVlQwUUIxb3d0VThXUdIB-AFBVV95cUxOckM3bE1idlRjQWItcDNYVXBMQmtXY0tiamYtRkNjVTJrSFFYeHoxbHpibFdQakZuNGVvM0VYRHlEMnluZmV5UHRPQzFndWFjMVFIbHZSR3VtR3FFdEhfZmJYTnBFOGlYWW5FTWloVGk5dW5IcmNhSmw3bDJ1RTFYVklwc2w2eW1Ma0RoUV9qR2hXclBFRktKdFhYRnNNWkl4MnVNTFptTzZqS0ZxQ1kyNTdCZkhrdG81ckFVb1hQWXQzdXpQc3ltd2JVNDZLU1ZPRXFKOUNLTW9seWxYM0JwdjFHQ3gwRTFWUkhKZmd5Tm5LU1Rudm1CLQ?oc=5" target="_blank" rel="noopener">Sonam Wangchuk hunger strike: ‘Government cruel for ignoring fast,’ says CJP&#x27;s Abhijeet Dipke - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>SIPCOT DTCP industrial policy approval</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQckRwMm45UlczNnl2WkEzUXp0S21Deno1a010c2dheU9ZYkViblRFbTd3WXZTblFGbUpzLWszWmFfakpTM3BaN3NfMURsbDhFTmVCQnJLR2I1RVNmR0RFWnV1TG1pQnRjVm5SdVloZk9qU1Y5eVNIV09EQ25SbFNGcUdLUkVDZjU2Vm5QdXFVb0ZkWldpX1hOcHhmd2NreHJ5a1Rna2FjU0dveU1IQU83dnp4MmltQkRNdWpfa3o1WWFoT1duWXVWX2o5Z25CeGM2NzJidWxn0gHbAUFVX3lxTE45dm9hcGpLZXBOR0FkemstREhDNzN1czNTTkxqdjhWeVFLeGEyenVvX3p4VzFKWEI1NkkzaEprY08yZHlzLW9ZbXNHRk05TVdkLWd4T3JyWWZ1bWJsVy1QTVd4TW50VUo2eUtyNWFsaVljWmFrWFQ5YUpBNTYxNDJwa2Q1Q3lqTEpJMExPR3RELWMzdTdnc2w5aU5UTVVkUFJ2MDRDQzZ2eTJBZGN5US14SDdBMEZsSDlwQUZkcUdjVmQxOGFyLUhFRllpdWlFSDAtSm9tQnVQeGxrbw?oc=5" target="_blank" rel="noopener">DTCP plans to increase maximum plot coverage for industries to 75% - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">This news highlights a proposed regulatory change by the DTCP to increase maximum plot coverage for industries to 75%, which will allow for greater land utilization. Industrial developers and business owners should monitor the implementation of this policy to plan future facility expansions and optimize their land-use designs.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQzRNNktoaDdDMVhTY0JPd1VObXFBUGVZOEpKYi1vc1ZSMmI0el9hVFFzeXJDT3ozeWhOcm5lUmJ0Mk9BLTdUQ195bHk2amlnTnIyZTY3c0FxakZ5N1lXalRneWprNld3WXhUWHhDUi1yOTA0aUhsOUpBaVhveEVPLWtmRXRrWF9tZ3FMbHh1ckpCdnY4ak1GX3BPSVNMaXNldUJGdG5FY2prQld0Q1AyejEwX3JXZmpQZ045c2xnenNDVmgwdUduR2RrUW9Ib0ZOWWJuVTJHc9IB3gFBVV95cUxPWGJxNmlEdWN3UlE4cDdOaXJDb21USXpUWjV2RVY5cFZobTVxc2dqT045YmE4NEZCdlFIakZfWWNEOW50c2pIeTlUOUIxVFBISTctb0htRkotRGJ0Qm1lUUF4ZmFLWVBwMF9tMlJfdXdkWHVKcEpaY0RmdjctWklsbGt2TGdiU255NEhIUHcyLTNobXkzV3NuV3JSbGQ4WmlWRWZXSC1XdEZwQjFUZGtGMzdJVmU2eUp0TDBSVTZTNXE5b092TmhMQ0ZBWFBDdEFqNE00cTEwQlAzOGVKR1E?oc=5" target="_blank" rel="noopener">Tirunelveli district attracts over ₹800 crore-worth investments ahead of GIM - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">Tirunelveli district has attracted over ₹800 crore in investments ahead of the Global Investors Meet, signaling major regional economic growth. Local businesses and job seekers should research the specific sectors receiving these funds to align their services or skills with the upcoming industrial opportunities.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQSTRQd2w2Nm9uRHVLRk4ySndFQmxRQjlER3c0YjYySzIzUTI4ZmtBTFVRcXhmY2N6bFVNMW5kZXhSNktfU0Yxb0NDdTFIS2QwSVVvNnRBaER2djExcWJkV0ZDdk9ITXFjenlTYnR6UC14d3QtcmNQMUYxZFl1WVdBNHB0X3FmZjh2OWJ5bmR3LTYtMk5nWERPdlVoUVA5MTI5THpkTUdobllVZnpQNjh1Q1FQVnJ6REdIT2xtRlZYUdIBxAFBVV95cUxNdHgxN1UzY2h2dUZtMEExV1didmdhb01FUTE4SFZ2SVN3SVBOWTNUSHJQMEp6UlItcE83cWFhSkVfNm9KQllTZ3hBNDQzeWlhS0FfQk5DVDZCVGlRREt5OG5tUG9yWVN6V1ljWkxtdG42OGRYd282QmFFMWFQLUFEY3NBdXFLYWVqV1ZkMFhGX3VYdTQwcjRlLUxjU1pKRXV1T0Y3YmdNQTd0YW1DejFiOEttN21mRGJISVBISTBqMWhvWUJM?oc=5" target="_blank" rel="noopener">Building permits in 27 days; only online payment - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>TNPCB environmental clearance approval</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMimwJBVV95cUxNc2wyNzlNbGtsZGxkSXY5d29WekZIZzZLYWVfS3B0WFpjOXdrdjZ3Rm82M2VUdzh1d19hc1N5UE4yODRmRGZkOXpCLUtxUXUyM0hpOWQ5bmtieE1DbjNYTTVoeGxYLTB4T09SUV9PeVJoWXZVXzJ5UUFONnlXTlNQYUdCRE9IOW0yUGs0TnVrb21XdE5JX1E3UWhlaEN1R2Vrb01jZHlxNG01bDg1c2pKbjN4dS10RTRTUXdkYXNfZ3NTcW9yZjFXbU9PLWo4UXMyQlp3SmN5TWg2eVY1SHN6UGRSOG5VMG9VSHpBUm10Nnl6VG84bUFCUEpWRFdIVlQ1aGgtUndZWXFxX3AzSjd1SC1hcG9kdUphUm5Z0gGiAkFVX3lxTE5CN1E5WmxraFNNc0RES3k4eXN0Y0QtOVhjek9RUHIzcC1IYm52NU1VSVdOZlU2Q3pESGEyS2dlZmZBRkRBMFRLWU1hLWRUVFVuNG45S1k3eXdfcWJ2SWJJR2tKQkg4U2dGMFdxalRxV0hBbW92YW90VkdTc19jZGcyc2RkMlZqa0RjWTdFUXpGUThDRVBCSzROLXdrWjdMWThLSzJQcjh0eHZXTEdnb0VvTmxPQ256MFpiVTFhWU1pX3VUSmw1anpVRFdtMkJPR0JRSGtteGdsWk9tR2RQaWxRck1mQTJWUVAzWkZqWFB5b05TNHhNelVYejVFYXYyMElWSnJIUFVKX3FwNmxnc1lTVG0zS2dlbkRrSFh4Nnp2Yi1R?oc=5" target="_blank" rel="noopener">Isha Foundation cannot escape prosecution for having constructed buildings without environmental clearance, TNPCB tells HC - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">The core issue is that the Isha Foundation is facing prosecution by the Tamil Nadu Pollution Control Board for allegedly constructing buildings without obtaining the mandatory prior environmental clearances. To prevent similar legal and regulatory challenges, developers and organizations should ensure strict compliance and secure all necessary environmental permissions before commencing any construction projects.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMimgJBVV95cUxOMzlBQXB5Y2Y5V0ltdUxOVW5tS2x4TlRsRE9hcnRkLWEzWXctbHhKc3hHRFdheFJmZm1WejJhSC1xS3ZmUG1GSHZ3MTZMd2YtS2Q4S0lhUGpPTnlrY1V2MmVBdERMekxNQ1UzMkdPT0ZQdS1fblBVYXNfaVI4c09OX3Rmb2ZNT1lLOERkRjI5eDN6eF9TNnV1MlN6dXFLRnp5akp4c3RUQmxxcUdlNS1pel9JbDEtc1YwWWNWaGVBZlhQcnk3X3JUZUpfTi1TMm5kamNVRWpQcG9YcmMwbEtLRFdxbTFZZ0k4UzAzRGlLY1pHMkFiS3ZmUVFiSEdvdXh5clNoTWdOdUYwcndsejU0MEJWOWZJUU9Zb3fSAZ8CQVVfeXFMUDdvN09sUG5xelBTakFZMWdaUEtFUDFwRnktNTZQSWJ6blZfaVhxMHM5Y3lVWVZLQlN4YzYtdHdFMGlsaDZ3YTdZTFhXdnRPRlEybjZHMGN3d3BhRWFQVlFpODBfaGhJR2ZHWWZ1c0Rkb0tiYm9zelRzMWVfWDJrU25ZMjlMXzdSeTdES3liWFBua2E0TjFVc0J4NjRzOThTWlNMTmxFb1gyQnFWMVhEOElsbkVuRjZRV3FKNWlHMkJKdER2RVMxYS04Q21zTFNtVDlDeWl6bDJfZ1JzaU1fXzR0aHZtZ0pGUWZURE9aMW1ya29vQkdaUUJSRGl0eV84OWJyQW1taTROYWhYR19SOFJzR0wzRVYzZnkzckVyVms?oc=5" target="_blank" rel="noopener">TNPCB urged not to approve Coimbatore corporation’s move to set up a waste-to-energy plant at Vellalore d - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">The core issue is the public opposition and pleas urging the TNPCB to withhold approval for a proposed waste-to-energy plant in Vellalore due to environmental and health concerns. Concerned local residents and environmental advocates can take action by submitting formal objections to the TNPCB and demanding a comprehensive environmental impact assessment.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiuAJBVV95cUxNdkdtT0Y5SGNybkNkWlZydFFpOUxEM0FwNmxuN2Q0QzEtSFNlZDUxVmpxZ3JKanl5WlZNbnlBd3ZYX2Etb2tqTXZfWC1LeDFyMDdpRElCZ0F2ZURuV2JpbC1DUzRqYkZrZVFMTl9IT0R1T1htb0hTbDRFMkR3MUdCdXFKWEpVR2hqUWJnUU5peVk4UFJRY1lPN1NfWU9VUThDWGNoQ05VWkV2UG8yUDR6ZFg4RkRqZ25jay1PYnlCVWRtQkktMWZzajVtZE02Y3JRYXBfQmdQT0tUa0xjU3Z0eHRzMDlBdUhJZDNPMTdWVHNVc3pKOVduMEs0QXFHdG5faHBrUktNOEFuVkZKZjlWcW1wWl9xTGxsbUNuNWNtVHZNWTdqQTY1WmpTTjZQX1UtaGRlVXIwLUrSAb4CQVVfeXFMUDI3T2RpeE5aRkxBekRZcXp5YkNRNUlkQ29yVFJJWEpYZ0J4eFU2cEVYdkdtWWtwMVZRamFhVy1SSWF3LVljTkxfbXJQN0NaNTFyODEtSkR3NXFZTk5HaDlIUFJUY09CSHpVc3IyM2E4MHlKUzVFc3Z2MGVJTUhoWDFWcDVSZ1dsNVRUNGZyV0RZd3plMlYzWS04VzFjMHlDckl0aXVZdlJZLXROSWpNd3gyQ25vWUZOUV9YcUk2eXd3dnNwQ2w5ekVJdmNFYzdzeHNxQmpLV05wQnVsS2xNU1F3NmQzWDZnYWQ2bGNvM0RFX3Z4U2FrMXU1TDQ5aElPS2lqXzJVN2ZfT3Vxb0tSU1lhZWZLUU5xa2xuUzNKRF9xdWMzUlZWdnR4ZTVVQ0wzdHdfMWpSSGlfaHNqcDJR?oc=5" target="_blank" rel="noopener">Tamil Nadu Pollution Control Board nod must for hot-mix plants involved in road-relaying projects in Chen - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPeV96SDRBT1dXaGxjZFBqOEhOcGFINlZ1amNyY3EwUUpSQkJJcTlXa3hyeDlEcHVveDhBMmxUSGF3a2ZodTNhOFROcHZsLUV5RzVleTVBeGo3Q2xvN0x5VGw3RFZKbFVXTGZhaHpLQUhvbzlBYkF2NzdjSnpoSTI1dGRsdHZ2Y0NiM2dQSXZkRFJCWTFJQnhMZVpIdFo3QkZfaEduMXlnMmsyZkE3R3lwQzkwMk9kQ3I1NUtpaXQwelU0Z20tSjZVbEFOU0F0blVtb2lGaUdFMk1aanozQ01RQUVOUjUteXFtcmFuSHBB0gH0AUFVX3lxTFBHeGlXeTMwaXlJN0xtUVZlNmNtbnpkOW5LRTl2TDB4SzBVR0R0MUpDRm8wRTUtU0o3MENDNFN3ZmZtYjFYY2llZWlUYWsxR0JhdklTczk2VXB0MXdEYWhLQjZZNXExcWM0X3RDYXRNLVJUeDN4ZTVodldHS1lXQjk1Qm1BbG14dnJyUnl5QThDMWwwcDlyZ3J3bFI1TXdvWDdvTHNFb2pfa200YUt6OUtUd2RETnR2N3ZqdUQxNlB1NmFqcWg2SVBpLUlvRFRfUndMZzVKZFk5b2JZd0ItcWwweUhGOG85ZVJSN0hraVFMOUl5NE8?oc=5" target="_blank" rel="noopener">NGT split verdict on environmental clearance for township in Coimbatore - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQV1BSVk9BQnVlcWdTTndUbEtFQ3diZjQ0TWEyMGp2Z08yaGpZbTJKb09PWGdzZVNUWC1pdnFjbkpWVVZIakVZM0pOZHBIV25CdjFIemxCNUtQN1czTlRlb0NLSW1CTk8yZFhlUHI1SVNzTTY0YzJleDVkamVRdUpkY1RVbXZ3Y2R2Qzc0NGFaUVFPUEpRVVFwWmE5TVBpaWs2OWg4bC1CQXc2RW1TMGlLWTg1Z2J5XzQxcFhjcEZMY3JTcXFVYU1MbjRR0gHQAUFVX3lxTE5UWHQzZUdJc0hUZlVuel9kbEpjbUlxRkNza2J6YmY4RXA1WEtOWnF6QVphazZJZzVwQWJ5Tkh1NjlYTG1KSldpR01WbVVQTng1LXZYTjNGckhsbkdnVS1VUkY2Y0NJWmlQTkI3eElLdFBBOTJ2aGlBcGV1R1lDNkRTVi12aF9GbjdtTlpHRDVkbVgwamJKVHhhcXNXa0phVzBtOFJ2YngyVmN2YkpsR1MxdHZ3Q2R0QlBMMlY2UFBJcjR6UEtwRjNJUW1JNFFzcF8?oc=5" target="_blank" rel="noopener">TNPCB recommends closure of 183 brick kilns in Thadagam valley - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi_gFBVV95cUxOVGF3VW5KbVh4Y19Ma2tneGRqVnRVRnhfT0MyaUpmTjVBWndUci1QU09Sd3J5X1RBU2hvMFVabFI2SHhhRWlLb05mRHJmVFJuNE9LOXhRT2FGZ1BraWt5Y2R3V2JGMHlzSkZVY2paRE14NkkyY0I2N1pBN3l3cHNzT3BkUUNTU1JTcnlFaVV3Vk9qYWVOYlM1RlI2akxsY0hZZ2NoNFJOQnpyaHg4TVZCT2hwOW1BOGdBZDdETHdRdmE4Q2phNnhLNkhoWjFIQlJCVndpZjRmNFhZTThhOTMya1dCYUxfZlp2ai14YlZIMTY3bWY1eWM4U1dGZnBXd9IBgwJBVV95cUxNSXF1STdSd3JSa21YTFpkckZmdHE0T1BPZEhHRWNZN3FXUFVIWm12TExxVnhUQnlaNlpWYklLakczRkl3R2g1YUJsUVRwcEtYSERDbHBFRFIyWDd0TFRKVjM0QWY5anNYeG1TZm1EdF8yTlRMYWtrQWFlZDZQZGdaOXBoM3hHQzEzRUlrMzlTNEVmTTVFcDhBbEtBV1otVlVzTU9WU1QxYTdoTWxVSHNicGhwV003ZnBkUFczMlFkV00wN3lDTm1zREVlZUpwN3NnaHB6ckZkODFrLTVpQXhEOHpObVhmMllGTmNISUxKNHZfeEFNeEVjQ2t2M3BwdDZZS1VJ?oc=5" target="_blank" rel="noopener">Supreme Court upholds Madras HC order quashing notice to Isha Foundation over environmental clearance - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNSUo1cnNuS3hOd1IwX3dvZmxERVJuOGxmSEJLNG55VFJzVVdHX2w5Zjh4Z0lMbUNlMEJNVm43SFdlbktEQVo0aUN0bHNmQWZ1NWlGTWlvZE9URS02RFdaN3hyV1NUVGsyOFY2V3FXc0ZYSF9sbzc5dzkwVDRad09Xb0ZXb2R3V0RnLWZUX3V6NmJJeWFkLWlYdzFpVms0YmdpRzEzbDJoV21IZzc5RFHSAbQBQVVfeXFMUGhUb0FHaVpueWEtbHJyTVhWWDBHc2pTVXQtektJcmJGQ0NIUkJrRUhUWE9PV2dXRERIS3A4c285dVBETW1uamxCelp5S01nNi0yQUFjQ2wyWkxwNkUtNTg3Z2MxMTRCYmRLN3pfY0tBTElUNzJEaENDVEhhVElGVTBlOUoyZW5Eb1JhejkwVk1kclZIeER0b3R6TlNYRlg3QlJvNlQ3QUdSNGdyMU9KVWxqanZ3?oc=5" target="_blank" rel="noopener">Neutrino project gets environmental nod - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxOUTZ3NEJucExmaW1oNFE0SERHWjB1eWJBMndYZU80WjlYN0RNZVNUbGtEMnY0WGVOc2daQWZuS3VZQTdhRy05WlktYVBLQ3dtNlA4YlFGWkFMQm0tV1Fla0pZVThLSWZTR1RuLU9aMENVWFZUYzVPOHFLVlZtWWRWOXhpYU1ZUWprNzd4YU9Ib21LQzIzU3JYbjhsZXo0UlNnaGc2MDJsWEZSbTdVWmUxTlY2ZWc5WVgxWjJXMTNoNTlKa1c0LVU5Z0ItenpHejN1c1NKbmcyelpGdlk5dWYzNU5ldw?oc=5" target="_blank" rel="noopener">Bldg projects with 20k sqm built-up area must have TNPCB consent to operate - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>Tamil Nadu election code regulatory changes</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOaTdjOWZwYzJScm1lVXhBb05TSkxUNGhOV091QzAya2NtU0NNODNsNll6M1lRaXJLMzlmZjhacmg4WDJqYWhrUy1URUZ1VHhJTGR2ZjFzZTY1dDhka2E3MzlyNlhCRmtQV1pZcDNKRWtIOFRYQnZpVkJZd3FMczBwcDN2bzk0ejl6LXYzUjRHdDhDcUNlRTNVTW1R0gGgAUFVX3lxTFBqRk1BemdKRWZ5NzliVldvS2VfMk1Uc3ktMGQxTHdUWnJiQWhaS1FaamxiNVQ5cW81WnFSdzF6WEhkRUZXY1NaUmFVSHhYWlFaVVRZdm5VRWxxZzc4bDJGV3V1OHgzb0JsdjlneHFVX1U5Mkw2V2F6cUdmR1plZ1hLMmVDS0N2ZzdZZjN3dUM4eXpMMFV4NHlod1hINmU5Sm0?oc=5" target="_blank" rel="noopener">The dangers of being a ‘cool teacher’ - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This article highlights the risks teachers face when prioritizing popularity over professional boundaries, which can compromise classroom authority and student-teacher relationships. To address this, educators should focus on establishing clear, consistent boundaries from the beginning of the school year while remaining approachable and supportive.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMiPkFVX3lxTE5faDBiWWpLa3cyS3BWYU1RQ3BrQmt2b0d4dnp0ZjRvTWZPdndZeGNzdzV0OTF3OXlCa3A3akhB?oc=5" target="_blank" rel="noopener">The Hindu: Latest News today from India and the World, Breaking news, Top Headlines and Trending News Videos. - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This link is a generic landing page for The Hindu news outlet rather than a report on a specific event or issue. Readers can use this portal to browse daily headlines or search for current regional and global news topics.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSEwtSWFCNVdqSDI5bl9BQlZEekJwN0RCY3IyX3REZnRvdzY3eFN5WERPemI3T2RhZW83RnNTU0lLdnVROGY3eW53bUN6WWZhQmpxMERpeDhqMnM0ZWdDVlVwX3N2VzBUeW5lMUZCdjR2M3MzZmozeEF2TWpGY0R1UmI5TVphWEZ4SkF2a0JrUC16VTdBMTU5TkZTS09Ob3MxLUJkV1p4bUVzSHp0cW8zVF9kR1BrNUVGbTQzYndrVkVMMjFHUmYxT9IBzwFBVV95cUxNdGROTng1Zi1rcnI3bC14ZWZsSm5qM0ZsbDFUUjF4RkZUSW0wdTZvd0c1MnpYc0ZjMV9Xc0VOQUhWaEpxWEIxQmVlUTZkel9BQ2dPNWZHZFBtYjdGTV90elo5ektLWDRQUFRZaEhFWHJid2lvRjM5NXhWUlNQUEVlU180S1IyaXZVVmk0dHpPczgyUV9lczgxT2JlNzJoOUdjaVRWQUQ1VW41LWg5Uy1ob2lvczNCTl9CNklNRnB6dkkzZUI2d2kyOERZcTNZdms?oc=5" target="_blank" rel="noopener">Watch | Should the Model Code of Conduct remain in Tamil Nadu? - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxObHNXenEyNmlJUDhNVWFjYWM0eWJEMllFTnlqQUYxdEF1WnRaaGpzN0hzY3dtVXNlUVp2Q0J3Mlc5LWJnamw2V1NNUHpPREttUEg3UzBnQUVPT1prd0lVMV9UZUF0aGc2UU9EMVhiU01UVGpxNkZpbnVYMkc2dWQ5OFVxaWowUWlDTG9JVzk0ZnVCa3J5YVVKZUlIY3liMktuYm8xSjhJMFV2aFphdVo5VTJ3Q1RyRDdNbFNGb1cwTHdYRnFmSlEw0gHMAUFVX3lxTE80RFIxMVFWVWp3b2ZRb2VDSEpnc19ZNHV6Q2dIRWMwVHVxZ0I0aUVrY181R1A0dHVkTjR5c28taldBc3M2dE1DNFZQVTBITThQZ2tNT0tBSUlOMF9sbkNGc2pMS05JR3VsV1AwU3pmZnZFaEwtZXJHV1hBcm9nTkN3bUtFMWk2eHA0WHZDd1EydUxqUi1fTTdlOVB5eXlYbl95M2hJS1lvU1prMkRPSHFkVE1rRkxxVzI2WG5NODVYMVVWeXNuVFZuVUxtbw?oc=5" target="_blank" rel="noopener">You can’t be inhumane: HC raps KMC over eviction notice - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUUJ2U2xiM1ZuT1J3Nk1Ba09ibUhhc2dWQVNUNnJmci1NQXhSblE1NUgzRndRUEZxblVZaFdINWY3SmtLV1Jrc2FYamhXcF81RDdmZ2FUVnVxSlV5d2ZwRDBpV3FBQV9EenJWdTRLMFpNSzgzbVNXOFBFZWNBV3p1TnN1dFpzV1hmbU1iUk5jbWZhY05qQ2h6NXB4LXIzSlN6TVp2REZJRENvRkpLbjJrdkFfRW9wSWM0Vm9XSXZrSkZTcGlIVVZ0eE80UHMzQ0Ywc3M5REVpVF9zUEtqZll0VVlkTFZ5WUphclVFZjFn0gHzAUFVX3lxTE5TNWVnem9IMmZVZjViMmg1eXRlSkg1OXZ4NUsxOFhqOTRxNEt2aUpoRXpVbXBqb1UtaXhMS2F0Q05nWGFMLWdjZ1lyZ3VjbDBvUGRvNmxiV2x4V3llUjJUZnE2U3JpTUd3Rl9UcFlmQm9XejdRMG1acWNOb0ZIX0dXTFFpMGJjUXJlTnBydEdHamRkQTdkSFpYQjhWdUdJWk1UanBCVHdKbG05VV8tbzNMMXljXzBVRHNxWUZPNWs4UjA2MGN6R1RRVlVjZXhqYUdWYnFvc0RLa0xEQlhTZEtLSXloclYxY0thWDVCYXpMLXpGSQ?oc=5" target="_blank" rel="noopener">&#x27;American jobs ought to go to American workers&#x27;: JD Vance as US cracks down on H-1B fraud - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVWFEaVNrNkZYaEo0SmEwakk2RXNROWRieHdRLVNxZkpMckZVTklaLWRuQVNaWUpocUVDdWNDck9tNDVZOUxZbWdyenB1QzR2NlpaVGNiWlVQNWJuS3BUQWNheU5GNFNLVVJVS2hEVUd6X0JzZU5RWmhhRGFIM2RKVkxNVklLb0YzZk9YNXBtWjF5VUlwUjg2eDBTYy1TMVdoN0hRbzJWNDJ2RGtUMVBveUtoQ2hDeGZmVXRzMm1wdVphd0Y2N0dVNNIBzwFBVV95cUxQZEtiTDNkblNhQVVheE4tLXN6M2QwSUFJVEdJOUJkdndYYVAzTlVrS1RKTWNPbFlSbGlSR1JPb1dvdW0tczE4VF9wVlBSNTFtTTJ6YWh1N2ZRMmtaU3dVeXhMd1MzZ3EyaVRIMU1mWTBfRVlRdVdvOGE0LUp3aXJQNlhzTlBzMkNKS3g2ZmxkcnE5VnlnSEp2Sm04TVFWTGtPN3pRdTZpVjhicVJtOVJiTW9UblBZNllGa0NCT1Z1WS1JTlNreHJDbGJJOGNZNUE?oc=5" target="_blank" rel="noopener">T.N. Assembly election 2026: Model code of conduct comes into force in Virudhunagar - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMHhMVWRzNzhwb2ItQ2hxcndxLVZ0TkxoVEllajBfcno4dGFyajJqRU51cHFOSkxrTkJEMl9KdXNleGMweXk0a054RXdKTFR1TnoyMkFPLXR6NUdsZG9oOC1raXFvZ2tyamFtV3hHZkNtaGd2Mi1FazZZR0ZMVmVaVXlDNGFkd0QzSlNRTFlhTHprajI2VTBzcVJmQUxKVkY2U0J6a2xvX19PZndIeGdvdjE3TU9LSzZLb09ncHdXR1pFaWNfSW9EZzI4OEV2QmhBWHJBTTlIUVRUa1Frbk5PSkx6cXVUV1Z40gHwAUFVX3lxTE1NT0F6RTV1UVp4cVBKZ243OUNrUm80Q2hBZmU0TnZRQkhGSzBXX1FoRnM3TkwtamlkS0E5SmdtMkNjVjdRakJ5cEltZTlPMEVLX1dnYWlSQ3A3cXo4U0gteTVtWWU5OUxDcUNzR2ExY2xPbWc3b2w3SWVReXF3STdUdzFkMkJVT2NicW9TOW9Jbk9TYUwzeU5JVmlzN2tnZFdmRUNRbHQ0WWtRdW1QcllCb2N6bHpiWGZjTFZCNFZmbENwRDhyOHgtX2o3aUIzZS13V0lCdF94cEVGNnBsR1o2b1ptRnFyeER2YVVhZmV0WQ?oc=5" target="_blank" rel="noopener">Tamil Nadu To Vote In Single Phase On April 23, Results On May 4 - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQV3JfdTR2LS1MajVhZ0hSRWtudnBzcDRYWlpWVWdkcWNtS3JRbnVNZHctRmNqYlI5cEFEalNLNWdvRlVPbG1rNERQTTVWU3lLWTZ0d0pfcGFVaGp1OHhEU2ZXY1ZtZ3pVZ3NMRE5GM1dFY0l4SWJXeGFUVnVIMllqNFVuV0ZuUGNUYjd3SlZlYXFWNnk3NEp3TTRCTUNCUWZDUElXZG93SWx1RF9iaVJlMHBKeUt3OTQ2OXFZOWNoMkk4VW5SQmdXZV9UbjFPMzdSR2tyZjVNZFLSAd8BQVVfeXFMTW5UVGR3ZG45RkpBN2JjNURyWjBITGxnZmVZcExic3QwMVJUMU8tblQwM09UWHFLcVVPU0dkWjdMYXJGWmxkUDRMWkNmMUk2Tzc0c1VTbkMxU3ZJY1E0Zk91N3dNUHR6UVB6d25SajZ5ZDdhTkZQQ3QzdFliTDZhSlBnbjFlbTh0ZEY1cEJmd3hUdFBiQ2dfbFFTX3lQUjBHVkR3cTlPMVFsRWZxSjZucDRMNE8yRlB0MGNLUUt4MElacVpmS1U4VTdQWVEwNy1sd3dabzlWOXUzalFvamdxRQ?oc=5" target="_blank" rel="noopener">ECI reviews preparedness for the coming Assembly election in Tamil Nadu - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>power shortage Tamil Nadu</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#dc2626">HIGH</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZFBRTEZEd3ljU2s1NmR2TjFSYTJVNk5YbEdjOHNIN0dCOU1qRjlzYkNKOGFrNk1hdHlHNm9kS0ZIczNCUzJKQ1dTZGRZbXowc09ucWk3dVZadlkwcW9kWTdNOHVWaVVaZFlzV0thRjZlZ3NYZklRMi1VeWJMaWVrcjlQcS13Y1JVNUlZTTFKalFudDNudlk1SFc5SHp5OGdUVDVWX3hZZUR6N21PS2w5cEdZN0VINFpkX0xJTlBJMFR0T1JpSDNOQWUzbzFlaWYxSG1DRVZXZ3dCMU5kOXd1U3VkdWVjWkdId3Q5MEtYM0hJd9IB9wFBVV95cUxOTllXVVp2YmdMWjhKZWoyQ2NfRUxsNndsNFh1N3lSTHJ4OWQwbUcybXFoQ1N1TzhMQ0NwWmRBdXpTdlhROWpWNHE4MHhLX3B2VDBNckxSdmVUZVZtNWJCYTlPa0xzSzFVZGFCZGJSbVlPS3NmV2gyWnJENUxZWE5EeWFXakJYWXE5blFIUFhZS1llUklPU1M5bjJTVzRUdlRINF9zTlJ3cjZtNm03eVBfZ0l1ckhwY24wY1NzT3lycnJzN09XVUd2V1lvbFZBMHRiYlVLekdRanE3b29CYUNsNHdtS2J4b1dLUzNCaVBPUEw3a3djNlZz?oc=5" target="_blank" rel="noopener">&#x27;Serious risk&#x27; to India&#x27;s largest nuclear plant after sensitive files leaked on dark web: Report - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">Sensitive files from India&#x27;s largest nuclear power plant have been leaked on the dark web, creating a severe cybersecurity and physical safety risk to the facility. Network administrators and cybersecurity agencies must immediately conduct a comprehensive security audit, isolate compromised systems, and rotate all access credentials to prevent potential exploitation.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQUtVaU9aYWFCdGtvQ0lOajJDQjJUSFRINWxmNTYzYXpaR2I1d0E3S3EyRkdBeENNN2hZRGMycUlIcE11NXoxWmY5M1FoTktreVBTZ0RhXzhrTVVrTWVBaGNIUlcyeWs4aFhyb2U3Rm41VllNZWdpM0JQYzdibGRhaDFBM3YzREsyanJFUHV5RlgwWDRxdmJRaHVKTEdxZnVpNnp6ODk5MFY3aGVhc1hoOEhXSE93TG1hSUFyUEliQm1JNnJvY0pLbWVxRllrRWVyYU1Z0gHaAUFVX3lxTE81blRhUld1VGNvTDVEWF9VNU1CMWpuRWhKMFNIbmlXSmo2WjcwNUd0QlJxbnl1TXlJUWRVNmRVeTk1VWVScS12SzI5RE5tcTRxZnV0RllMcE1rbVdrS2NjWEN5dEc5ZkRGbldrN3R1WFVXOEJEVThMYjMxX2VHS1dBN2pqZ3d1SVBpdnZ2bXVJVTFhYmxfYlREdy1jc1FnNGZPM2JYaVlBamdRXzZnUnE5eFFqVUo2b1YyM3ZmR1dYRFJXdHpDSU5Qb3ZoSTNMajV4Ynk1dWl0RnZn?oc=5" target="_blank" rel="noopener">Cuba plunged into third nationwide blackout in two weeks as fuel runs low - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">Cuba is experiencing critical energy instability and fuel shortages, leading to its third nationwide blackout in just two weeks. Travelers planning to visit the island should postpone non-essential trips or ensure they have independent power sources, cash, and backup communication methods before departure.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMDcxMjFMLXBud2ZlZmx1R0RZWExqQXVSLUYxbWpodm5tUWtiU3pPZlNta01ja3hZVjZUMFdiaC03OE1Ya1htcWZWZFpMNFNtaGMxWUNEakhpdkp2Qlh6QmYtWmJtak83LVNfSUpyenRMUWNyYUU4QlFoTHdHbVc3SkZWTDdRUnpyaTV4dWJYRXZlVERibE9IbVdueEsxd19semloRlBXQnlGZEVjUU12U0VLM3REbk8yUnNWcmpkM2dMUy1ZcHJZUDNaSVpEVndZWjVVNGtNVTI1OTFqdGZyZnE3NWZJMkpESzVCbtIB8wFBVV95cUxPUmhiLVZZc2xLSWxtM3VleXBEVEkzT0NTOWdKQUZ3UUc2bjh1c1lNMGluT1NFendoekVPeE9ZQUo3RjNzUXdpelRydDFNTFVWSmhRbHR0RDJnVGJ3TUZack9zM0ZQUEZFbUQ0M1NYaF92MzJfbVZyQVdRVVdpUlhwZXhsN3BnY2h6YW5DUi13bng1Z3BDRldQSjVaNHZpS05MLW05dVR3ejFnU0M0RVpVT2pYOVRtbEVkMm1IWFV6a2RsVlpFa1FrZ3hReG56UktfdFRXOWFwSzkyYTV1cFo2MkxDV192WGZhbGstU2k5R1c0LW8?oc=5" target="_blank" rel="noopener">NPCIL denies ‘sensitive data breach’ at Kudankulam nuclear plant project - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMigAJBVV95cUxQbnBDWnNaSy1IN0ZtTHVKQUpudG1walVQOXJoQURQeGVOOGVLTVBJNXJqSFVlcGRPMkNyUVRpTUNOMFZxZ3dYQzVjbnFoRWRZT2ZuZkxzWmNSSGtabVFKOC1TYTV4cldyNjUyV1hGSVFMRFBUM1J5bEVwUTNON21YU0lzeFNtYk9hcmVxOC0yN3MtOTRCODcxLWFpSnROd2FZTnY5WDhKZU9UdFJmVWdiTzNsQ3JmWFhxbk9udUZ5bWIwdFZOQ1hBVzNTNTlReUFlRXgxWmhSMm9xLU94a2ViSkF6MUtZakQzZmJGNXBTSF9iV21rN25OZ3F0ai1XRk5P0gGGAkFVX3lxTFB3S01PQ3ZFZWRLSFZ5cU5Ha2o2aXJZSldpX1c0WldHNGd5ZFdmSUZKMDNKYzdLamRwOTlqOWZ0dUFNRDZzcElnSnZjSkFmcEdJaUFjY2ROYjNWb0dWZmZ4dTdyUUV5d0U3MDd3OS1aaWNWXzBXWlZHQ21IMnNjRGwtaVFSVE9tOUNVSFJaeVNMSU9WbmlScjRmajhiMkt5ZnVYRVg5azZ3QTZmWTVMTlN2aU03SHVyejlfSmFsdE1PblRVQlQ4UVY3R2piTnRJN2MzbTBuZG9Fa0tySVZoaEVaTmxoazBlcFF1bjBXWDhOSF9BdVBZS28yS09LNlhvT1drYmpyUFE?oc=5" target="_blank" rel="noopener">CM Vijay shunts out vigilance chief amid row over his appointment - India Today</a></h3>
+              <p class="source">India Today</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxOaWRXeWpsVVVpS09ycWthNXZrdXd0N01TY0YwSUxpVFJLbVRfQjBHN1hjUVRGT2RsM29YUmlzX0lpTHJGQjI3RFVyeWNaWGZLMXcyWHJKMlpPS0FfSXhaR3JwR0Q3d2hrM1FjWEZsOEJac0pmLVNhdHBmb2ZCOU9VTmtwWEJvcTUzNG9jemY4UzlxckJrZlN0b2pmLUJlSjZqWkN3ZDVUWmp2c1lUV19ralQySk1zVld3LVgxZUJQQXhCUXd0YWJzbmJVRzVlSWRJY3VuM3ZWcFBNbGEtMnBhSGR6RF9fWlI2cEZoSVFONzTSAfYBQVVfeXFMUGNISDNXZ3A5Q1U3OEVfU1Nfb0tGTlVsRUJTZkxDMG0taHJydTNubm5DSWZXWFc0UDE0QXZSM3ZFWEowT18tN1hMQzVWRWtGYVZlWFphR19oZmY2WFlnLXZSSTRQdzV5SDNFM0xjSmdaVVQxcFlva0NrWEdVNzNDREZ6RUctUGYtNHVIQzJSeHpoQ09tU3hfVDNhZE40SVdVWUJnaXd6MjZjck9yNzdmTldqRnIxV010ekFjUUx0amdhbk5JanYtRDVaV2FaT3l4OWVHck9wdFBIcHZpMnVwamxBY3NDajRRdF9TOXFOMlpQdFA0OVh3?oc=5" target="_blank" rel="noopener">TN govt transfers senior IAS officers including Supriya Sahu, J Radhakrishnan, Umanath - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPcVEwMXViY2N2TDA1SjRMUHhXSUdibUxYSWM0MDNpcmNkWWRVSy1sMGVKcThhVkJSa01remdTd1U0TFhjS3R6bU1kWnA3RDZITkxDS1FLV3U1c1gzNEpDU1FzTko4WFlCQTlERnZ3b3JSQ2gtY1ZIZktjeXVoMnBia2lwUXZhb1c1OW95V3VPdGFGZ2RJSmJjeWRad2xzb0dtTGxUM2J3amdRN09abXFDUnpKT2xGVXpLVnV3WV9HRTItV1NpSmtrTjdiUjTSAdIBQVVfeXFMT0VMcE1hMGdIRVRIbkRVeDJZM1ZXLWV3QXZPQVhrNXd1X19VV3JLeDF6eXlwaUpPUC1TVEItczdoZFBiNUVOaUtvUzh4ZFJjMVVTOXpxQnN1d0FlYl9aTXk0VHEyMG15c2k2ZFVJMUtad3NqbURtTUpmbGhOQmxBYzRyYUZHTGtyWDhZZ2ZwUkJKMWU1eVhYQlZJNTc1ZGpnMUtxNzhhUkNTaWh1ZExrd0hrMUN0ei1tSWplRHI5VVhXQjZGYmpSVGUzbmZjX21QVWV3?oc=5" target="_blank" rel="noopener">Files linked to Kudankulam N-power plant exposed in data breach: Reuters - India Today</a></h3>
+              <p class="source">India Today</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxQS0FVaV92ZjZFeGoycHpDd3ZVU09UR2ViZmNORUdVSEw5RWV1dGZhc1lmWVYzNVNFa1ZCaXlXNjRoRm44R3dQMFRGTTFPZmg3YWhMX1J0dlZ0V0k1OVpFM3l1dTVsb2hyaGtqbHB3cUxHbjZVRFl0dnF6b19tTlVHUFB3cEkwenBSNmtjQkZtdkFOa3pOZzFpR0sxQTNFZEVoRV9mcFNnWkJKYUVYa0RFZ3J4QzNyZk9WaEVYNjJvYkdMN21OMGtPcXlGNWZBYjJHVjdfSl85Q1NNSklDaGVOUzJUZTFnam5XdnF1UlZYc0haaElaNU5j0gH8AUFVX3lxTE1DbWRsXzc2NE9hWkJpdEJxN3BRQVEyWDMtUXMwdXhHYVVJTkllYlRGTzhmbnNhel91c01aSVQxb1p3eWdTdjJLOV9vaXBfck9GWDJ3NzctNkxEYkE5Q0hyZUQ1c0ljdVVVUGM1N1VVbS14XzEzSEhSOHZuMkVWUkFMUnJDTEJKbDlMaGMyQlJhUUljT2NwQnhsTjMzVFhCNlA3QzAwRW9NaF9HOXVSdlBJUzhQWnF0T01aQkQ1akhfQ21KQzRyMkpoVzhsb0hTWVhDd2IweTRUeTVDNEFUd2N0VHlBR05LZmY5Mml0aG9LV0V6N1lvLUF3OV8tRw?oc=5" target="_blank" rel="noopener">France shut its nuclear reactors as rivers boiled. Is India next? - India Today</a></h3>
+              <p class="source">India Today</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiigJBVV95cUxNVVZmWmhnNTg3NWVYYjMtMG9xMkswX0RRNFRyd1h2Y1I4emFWaUh0X0d0SVozU0hUdkIyaE15Z1E3T1hDR3JxX1NhbjhWUVpnU3JkRlpTZ04xdEM0NlpvbnNyLXFPbktqQXc1MkwwZUZCQ2ZjaVVFUC1VSE1IaTNkeG5rMWlMYTV0RDIxQ0ota05tSGZFYUM2RnlBdVptOGNxQVdocVQ0TnBMdlBmNnVwLWFhUkY3dTVJbWFMNlB6MGJyR0cyTWhCUHEtaHBXZzFLS2E4dkF3Y2dFZi1hTk1ZemFUbjl2cnBDb0puM1kxMzlJMV8xVVlsUnN2eFRvM2FDcnV3em9oaFcwZ9IBjwJBVV95cUxNWU9xT1B6RUNDajI5emZ1a2Y0RUFhc2JudEZnN3N0Z3VZa0FXeFZBMUxQUndRZnd2SXVJTTU1Mm5ycXdwSl80VFlLbHZSZ3E3ME84Y1hsdjNFNmt5RHh4MWVGY0d3TEtoM0ptcXhYQ1pSQjViT01JRDJQU1pSRHA1bk0tWnAzbmVfeksxLWktWmdKTl85WHhMakJ2MFhJdFJmUjZXT09US284clIyUks4Ulk2ZWtlS05ZTVhxZF9RZFhLQlJxNjMzTnVrUHNNRXZRRGR0U1VPcTR0UUpkeEw5VHZOSnZ1WTRsVG40NlJrNUZFaHN2T2VvcnQ5WFhjdmxHRmI3S2RXNkhSU1hqUVFB?oc=5" target="_blank" rel="noopener">US eases Russia sanctions bill, cuts tariff threat on India and China from 500% to 100% - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>infrastructure project tender delay India</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMDcxMjFMLXBud2ZlZmx1R0RZWExqQXVSLUYxbWpodm5tUWtiU3pPZlNta01ja3hZVjZUMFdiaC03OE1Ya1htcWZWZFpMNFNtaGMxWUNEakhpdkp2Qlh6QmYtWmJtak83LVNfSUpyenRMUWNyYUU4QlFoTHdHbVc3SkZWTDdRUnpyaTV4dWJYRXZlVERibE9IbVdueEsxd19semloRlBXQnlGZEVjUU12U0VLM3REbk8yUnNWcmpkM2dMUy1ZcHJZUDNaSVpEVndZWjVVNGtNVTI1OTFqdGZyZnE3NWZJMkpESzVCbtIB8wFBVV95cUxPUmhiLVZZc2xLSWxtM3VleXBEVEkzT0NTOWdKQUZ3UUc2bjh1c1lNMGluT1NFendoekVPeE9ZQUo3RjNzUXdpelRydDFNTFVWSmhRbHR0RDJnVGJ3TUZack9zM0ZQUEZFbUQ0M1NYaF92MzJfbVZyQVdRVVdpUlhwZXhsN3BnY2h6YW5DUi13bng1Z3BDRldQSjVaNHZpS05MLW05dVR3ejFnU0M0RVpVT2pYOVRtbEVkMm1IWFV6a2RsVlpFa1FrZ3hReG56UktfdFRXOWFwSzkyYTV1cFo2MkxDV192WGZhbGstU2k5R1c0LW8?oc=5" target="_blank" rel="noopener">NPCIL denies ‘sensitive data breach’ at Kudankulam nuclear plant project - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">The Nuclear Power Corporation of India (NPCIL) has denied reports of a sensitive data breach at the Kudankulam nuclear power plant following cybersecurity concerns. In response, cybersecurity teams at critical infrastructure facilities should use this event as a prompt to audit their own air-gapped networks and strengthen access controls.</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMinwJBVV95cUxQR3pFM1p5QzZDM3REQnlwY2x2NFFEYUdjanlQREF0d3FMaXM4ci1yVjFuenBpMjVJZURfNmVQNjNZRERaZ2l6VTRqbWFYdkZVei11ZkJ4SnpfdWdYYS1KTDVPT25Nd3hqTko1eUpCaWROdW04dG5NYm85R0V3dndCRE1SSjJYQjhUWXM0dXU0ZWItaHA5TkwwMFhBeGw5Y2J6cWZTT0ZEclNqZnIwSG1SalZtajZlV1FHY3p2bDVkSnBwZ0RfUG15N3BaRE9DYzBWa24xUW9kNTk0c3MyY3l5VkFyRFRXdDJGLXVBU0ZiXzg4ZFR0ZHdNM25HMG4wUnlzc1RtWlQ3eHAwMHdjcnl3blNmbHRlLWtXcUtIaDlqNNIBpAJBVV95cUxOcGd0bXBrUTJYb1NwaUZLTS1VYVJsNVV6Q0tJOFZEUWxUdzRjQU15eldNcWdfVHJuZzh0UTBUX0NnYUdjS05BTUZmazBLeG1obEFaUDZHOFg2THhya1pjVk5ETHdjRE50eTNhMkN5WUFjd1dGMUVleHNBVl9IeW5MNkZHMGxiN2JISE9uNk1ONEZBeHpqbUJURnNSRE81RTl2d0NOOEVPOU5EWmFsS1JJRnlEbUlXdEtBdk5MSF9YUE5wM00wQmhaUmhERnNkVkxCMW83a1dvei1vNHc1ejNXSk1XVzQzY3R3SktLZGRQLWtVX0lZU01qbkRNTUh5NE1EVjgyaF9HLXhmY1JMN013TFZqZUNQdnJseGhKbkhKeXNHTnNo?oc=5" target="_blank" rel="noopener">&#x27;No dedicated EV charging point&#x27;: Residents recall how safety lapses turned Noida building into death tra - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">This news reports on a tragic incident in Noida where safety lapses, specifically the lack of dedicated EV charging infrastructure, turned a residential building into a fatal fire trap. To prevent such hazards, housing societies and property managers should immediately audit their buildings&#x27; electrical systems and install certified, designated EV charging stations.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMivAJBVV95cUxPS3JfOG85b1ZYRFI5ai03RnhiN2p6QkxXeTVpamRTLTVwWXZCaFUzVTN0M3UybGY0MWo2djNHOWt3VWhRclRJOGFiTXJqcWp6WDFESDZVVkkwbEJZS0pZdUE4NFBSaGlvZkRXZXRqQkRXc1ZsZE9ZR3Z1WjhqQl9JOGNzMUN3cHd3TWg4ZGc1U1dCb1RXalp5cTU5bnFYTUJET3lmZVAyTzd1YTRzSExDT0ExLUFqQnJNUmlUbVg4WFlxTU9NSUFoeEV0emNfcDhLRnMxZHVISFBGRlgyUDB1REpiSHQ2cjlGWi1KMzNETlFUWDl6Rkotb25Nb3Y4NVNfNkxhVzZuS1hiTmlvOXA3LUJNb2NIQ1ZZYXhpTE5nRlJTRzVLNG13REdkODhveDZybEZBNDBKak5mNTMy0gHCAkFVX3lxTE5YdnJrMjRHMEZtRjZBNENQdHNWb3JhbDJWb3gzdUItRU1ubzVkYndnRFRlb2padjBjdUYwcXVvRVo5R3lzbnJlRnc0UHFvUjk3Y2kyVl96MUY0cnhHd3czcmxCdWJ5SE5EUGFNZElQaW53SlN3TFhJUHc2X3BtMGVxREhXMG5PMHZ2aW10Wi15VlpNdG85cG1PbHZHcVAxTGZHYk9iNmhUc1ZXZllnRFQ4R2t3cjRQY29RaE1uUEgwei0zV0VIR2s5MWdxZ3NqZC1fOTd1RVgzaEVjcVZpdVFSWGxLN1ZDSlIxQTZVT1cxVlZjT29vQy1leHRZblF3N3pxOTFRbnhwSEtUdlVCSmdlZWcza2dJdDVseXNtYXBMNnRkWkZIQzhodzVhcmZGbkwtQVViVnhBaUs0b21OVDhpenc?oc=5" target="_blank" rel="noopener">AI data center expansion is creating transformer shortages across the US, forcing power companies to orde - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNaEZlUndSLURRLURxdkdtcVNMNGRXM2xpc1R3YlZNbUJkMnBpbXpURU9UcUllS2pRQzdhMzhsN2pjNkNVdVNlVGJqamNhVlFpanp5cUVWbXpGZTY3SnFEUW9LN3hmMFo0Y0NIRWFRWEFIRWNaRXVFR3l2R1hnejRVck9HbVY2NF9TbkpPS3Nia0ZPOEpzd1pNenhnbDFzV0J2QnlLbmdSYWw3LUlYS2lRNng1czNLNkZYSE9WZWphTkxDaXFL0gHKAUFVX3lxTE5NM2I4dGgtWFo5WlY1VGpVZGhJTElUbzQ2OVNLbFBocTNFR25NR3d6ZWJBMFhYWDlxRDNpNFhhN2FWdEhzVW43d3pFNmNiRUJuNzc3clBsVUVsdXJ4R0l5R0lUOGttbmM4ekFzLWlja0Z4eGxZWjR0dUZxQ2JQcm1RR1FRb2ptaWR1TzY0ZWlvanlXelNrWTNQNDl6aTh4UlBHMDFGLVlpSms1SHFBMG54LUVrTWNocnhNYjRwbmlocTM2LXZUMjdFN3c?oc=5" target="_blank" rel="noopener">Courts must not stay infrastructure contracts: Supreme Court - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZi1jU3ZlaEFGaExRT2dFSGd1TU9KN2VEeWFQYWhvSVJZRmY5cm9OaUZoeDU5aVpsSDltU3JSaWxUYzZlMmNIa1hRWDZ5bkx2Zzk5cldkbF8tVVZEVnhlRl9OcGJPUVd2cklZUmxSekRTZ0pvLTEzYm1Ba1lMSm9XMzAyVVg3RFNISi1NV24zelVRYkFGdVpRcVFPYVIwd0cyOFkydTBwempGcEI0MmladFRuV2tFOVd3YnRWTkdncGZhOGMtT2pVUGt6Vnl3NU1scHBKUlpkWdIB3AFBVV95cUxNYkFadEVjdS14OG42RF9ORVR0SHBSZHRBellHcHdtMTNyNUxNYndBUUVhS0huZjUwR21LVkNNdjdsUzV2M1RUMUVlVW5ObDczczFJQVNKYmNVbmlGM2pZalJEX1l3ZDRNTzRhSjFpWmwtanJBMFppRFhza1RfVkUtVlBXR2Q0UXBKbGVWRmxCNWg2MC0zQ3NyNmdjc2dqQVBkU08zR0lVNXF3bGQ5QVZfUXk3eHRxdmNsak9FYjg3TzNmMUhHdmZWbXM4T25uZGp3dlNwMU13TGJlcHo3?oc=5" target="_blank" rel="noopener">Nashik civic body allows works of up to Rs 10 lakh without tenders - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbUxqSFQ2VEtTX3lPdW9ZT0xYUktkbzRWaFNHamRCbnVnc2dlYWpaY1NQdjZaMHBCTjkwRkVBb3RmY3VhUWtSYU15TmdnREdRXzhPZzJaM2xDekJrRVZNR3lZMWJaNDNvaENIM0VodjdwRzBvaHVlUjhFSVQ3bXR5cE0xRFNiVWd5eG9NMGRBU2F5b1RmME1EajdESFhzRjJEeXVKYS1FWE82RzM0YmZSdHBJT0ptbzFJYmVmVDBuSkRUNDRQRWtkN241c0p5WE5Mb1Q0dld30gHbAUFVX3lxTE4xMzdtMnFWWlVsTWRhaXVySWlVeXpFSUdONTBwMlhpVVFZTjBnRDNYdjVERTMxTlRQM2F6ZVhFVDFIOE5hVkxheGl0QkVzdGx2TGZQQWM1NXFRWmVGYTFRSlg4SnpoYVYya3puWnkxVnJNY08wZkNMY0YxdXhQYXF4V0Q5MU9qb25fVzJQWG94OGR3djFxdjdBMjVia2JucjJVNHBtUGVYQWszM0VVNHdyMGFWV2p5Ulc5akE0Rlhocmdkc1c1ZndoSWhnSUFnbWJiVTlUMkJGRlNJUQ?oc=5" target="_blank" rel="noopener">After L&amp;T’s challenge, MMRDA scraps tenders for 14k cr road projects - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxOYXF6M2RqdnZ5QXdRVkZzYjVkb1ZBMmQyREdHeWFBTWs4bzR5M0tFVGhVcTNoU3dfMlJiN1hqTWlNMFlNa3JvVEZrQmVQaWdOcnhFN2MtM1dMRjk4MEkxSllRWTRfbUxFbE5RZkZWMzFXZUV4UnFMU3Foa2c1dFNfVERlQU9DNml4MFZsZWpwdGJCTVg2YWZhUlVVUmNHeUJoZnNhcEQ5Tk4yVmxubnFQZ0pzWDJKSFZqMVRUcWthcG44SFkwd0ZFeHo1Z3ktM2hFb1diMDhzU0EwU3FmRlltT2kxV0p4a3RCR19aYVhIRWdzMjDSAfgBQVVfeXFMUGlick5ua0xnUnZTOUM4SGd1Sk9hWWdOX0plMy1WemM2MVJlSHowOWN0VUV1bnZuNG5LZkxzczdwbDFmcFFPWWZueTZlLUpJTWo2X1VoSjlBSk9vcktGRlBmc1lyeFlXc3d3M0VZNHhjZUlEeUZRWGdnNi1MbVBRdDNBUktXTlBXc3ptdVNwNFF5amxjMWNVLTMtQ3IycEpma3JQNGVrSm4yM1Y3T0VGcUkwczN5eWY4bFJ3eExXTURRbjFfMExOQjRDVEdjSjVyUHhNMUwwa3NHYXdqTFlscEVMMWR0UU9xdmY5UjVuMGQ0V09JRDd1dHE?oc=5" target="_blank" rel="noopener">Highways ministry sets new milestones for getting land &amp; statutory clearances for road projects - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxQNy1OWkdTUXVXQnVkT3lZLXVmMkgyVVBhOWJyRi1FS21lMGtIUUtCNkdBUzNZRVdxbmg4N3BvWjg0bnlNQXh5M3daWDEzNDBhX0ZTY2lNRTRGQnRWaEZtMDl5cmV4Q3ZXNmo5MERVMjlZTTQ2XzVDNVVUWk0zSElGMnVBQksyc0dwMHh2S1dGbmtvSWg4Mm1nSG9kNG9GUTdSTDVUUC1RN3lrM0J2ODVPUVY2dFA0SE5UZk1vY21ZVkNtSkRHWDQ4VzQ1UWVGbXIxRU5KNHJSMEhkRHBWZlA4SjhEODhHYWlubXRGUHRkVdIB9AFBVV95cUxPOHJJX1Q3TjdLMVB2cUpHdWI5X3VWdW5IN2hHZWdycE1pbVlKNDlKb1RabTZkM1FMX2hZLU5mMHpwRURmMkZUUUZWTnZ0WnJudlFibHpZa2llT094a0dxR0NsdW5lb0hCQnBkbkVqeGZZUFdmWkl6cFpSWGs2aU5zd0dNbTZnTFV2NDB2czc2dmYtMGVIaUJDNW5XWDBUUTdTcElGZEdad2F6TE40cHZEUzVFLXdEOTBTMHJCWWdaLUk0SWQyNjV3eS16Q0ZDckdKUlZCX25TM0Z2MS1jVER0WFRwSVQxbTVGd0pfWk1jM2I0M1lH?oc=5" target="_blank" rel="noopener">Only 15% of Gurugram Metropolitan Development Authority budget spent this fiscal year - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>land acquisition issue Tamil Nadu</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxOaWRXeWpsVVVpS09ycWthNXZrdXd0N01TY0YwSUxpVFJLbVRfQjBHN1hjUVRGT2RsM29YUmlzX0lpTHJGQjI3RFVyeWNaWGZLMXcyWHJKMlpPS0FfSXhaR3JwR0Q3d2hrM1FjWEZsOEJac0pmLVNhdHBmb2ZCOU9VTmtwWEJvcTUzNG9jemY4UzlxckJrZlN0b2pmLUJlSjZqWkN3ZDVUWmp2c1lUV19ralQySk1zVld3LVgxZUJQQXhCUXd0YWJzbmJVRzVlSWRJY3VuM3ZWcFBNbGEtMnBhSGR6RF9fWlI2cEZoSVFONzTSAfYBQVVfeXFMUGNISDNXZ3A5Q1U3OEVfU1Nfb0tGTlVsRUJTZkxDMG0taHJydTNubm5DSWZXWFc0UDE0QXZSM3ZFWEowT18tN1hMQzVWRWtGYVZlWFphR19oZmY2WFlnLXZSSTRQdzV5SDNFM0xjSmdaVVQxcFlva0NrWEdVNzNDREZ6RUctUGYtNHVIQzJSeHpoQ09tU3hfVDNhZE40SVdVWUJnaXd6MjZjck9yNzdmTldqRnIxV010ekFjUUx0amdhbk5JanYtRDVaV2FaT3l4OWVHck9wdFBIcHZpMnVwamxBY3NDajRRdF9TOXFOMlpQdFA0OVh3?oc=5" target="_blank" rel="noopener">TN govt transfers senior IAS officers including Supriya Sahu, J Radhakrishnan, Umanath - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: The read operation timed out)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNYUFCbkp2TnphckpleFBveGVNd0JpQ2Y0YzBRZUxEbzFHRWtCa0t6NFNVWnFPZC1BTzhnMy1vMGdzM2U2Y1ozbV9JRjY2ZGYzS2pLd0doMVlqelhrdUZMbVpGUTFUVXhka25fTWVrZEZ2a0w4X3UzQnFFZzNDVUQzeW9QUUozaUhTUGg2MVllUWp2UFRPbW0wVmJzdkV2Y0tXRHozWVM5cFRpVVNoOGs3QmlSaWdzclM0TjU3N3ZwdHpRUWk1bFdiNVVUbE1sNGdXeFUwSmU3NjbSAd8BQVVfeXFMTzRLb3hxYXVjdWc0bUVROUp1bUgyUTd0MXA1MFhTNmp5UjBDektJeGs5SXNzcDhLYUY0amxRVGk1Mmp2RFRLeU56SGFTYXFJaUdrdmdPc3dZQ0RQTF9ha1kydUEyLXpneTRtaEtZNHhPSDJyNFhBNmlNWVNvNHhkek5GMzJkd1ZyOXc4RVRxUTZLVFdFX0ZMTExsS016cHNQT3Z0WF9ZMlRFZ2FPclN1WDZCQ0RycFNvc0NRc2ZfdUhocXRsYldsMFdmTWdkRUVrN3BnUC16VTF1RG9CMy1LOA?oc=5" target="_blank" rel="noopener">U.S.-based academics call for Assam land rights activist Pranab Doley’s release - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">This news highlights the arrest of Assam land rights activist Pranab Doley and the subsequent outcry from international academics demanding his release. It underscores ongoing concerns regarding the suppression of grassroots activism and human rights in India. Concerned individuals can respond by supporting advocacy campaigns, signing petitions, or contacting international human rights organizations to help monitor the case.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQRHR5dWQ2OU9iVEU5clkyc0JwUXZWQWlBc1FPYVBrZ0V4VE9HWExXVDFlMXFCbkVtWllMRWhWcUxseUszczZlNTl1R0ZaUXZUdGFRSnBpYVdueVFNSXJoN053UHpTRTlJSXFsRU5aY0d6WWx1dlNjZG1FWUdLcGloQWI5RmtuVllZem5WT0xJYUhibldRdTB6ak9lQ2hPMXhoS0lKNlR4VERPODVTcWVWOFYzOGlkWEp2YzJBOTRIcExIS2RHZjFzUGFqdXVtYmlyeUtaMUhDZnVzM3dW0gHiAUFVX3lxTE9HZHRtVEJYQTZyZzZ6RXQxOVpQU3pNLVpzS1g5Vm9hemplMkNYVUt6VW5DRmpWT2t4V25yM0RNWmNLNmJDajV1UjhTbHZ5cFpQNXNsSHJEZHdOaFlOLUJ3QThDSlFldlFzX0FxYVI2YjJEendRdnF0MXJObHF6SUNfT25rajlrallUcU9MZXViSGlPU3ZqbWVNdGpteVpIeVZIeHhYcnE2cGtwWlEyQUhDb0RCc21aUTF0dU1TMUZIanhyME9RRnVGd0gxeGpJME1QZ1ZmbE04VFYzTVBTWDRyTmc?oc=5" target="_blank" rel="noopener">&#x27;New language in class 9 stressful&#x27;: SC on CBSE&#x27;s compulsory 3-language decision - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMisAJBVV95cUxPQ1Y2V3BfYnQ3Uk9ycl9VcU1QM0N6ZXVBaUs0X041RG5tSVIzT0FtbDlvVmpOOG1SWkJTckswdXJaTkVrQlJFWmwtNXRxcWMyZnZNUml4UnV6YUMzcFVhMlN2ZUtOVkRpS09pcDNuVkZtU1Y1TWx4a1J2UURFbzEydjVJZWc5cWRKenVXMkdnb1VYc3NUOHFXVmpTcHIxbFlySHh6NmxyX1Y2ams2ZVZjdEx1ejgya1gtN2c5WEEzeExyZXd2N0I5Q2U5VDNqU2ZhY1o5MWFNTkhHYUh3V2tvX0NCbGVRaUYtbF80ZjRBcVJ5ejRRa0JjdnBpOHRhcUgwUHNRTDN1UEcwQkJCUS1rRDkxOWFvdEktSjRNNC1DOGxsRlRnTklwcnNvNV9GTVEw0gG3AkFVX3lxTFBKTUd1UVQxLUJVMzltaW5BbnFWRkZKUXZkNU1sS0dhZHJPYXo3YkRwSG9NcHRjd3h4elUtT2pqd25XbVBJNzltQW5QTWh0YUhEU2FjUTR4UUdSS0VseXJMXzRIUll6WENIWHBjRTg0VkxHWnhmaml2QmdqUTBjaFRGcXpmUTlFQXBnZEZoQU1UZ0VwSlJGZ3l3TUl3VW8yTVhhM3k2aGZOYVcxMUt3UGQ2Z21jdDlmaGdQMUxEUldubVZkY0lQS3Q0MFFlRnJncnI1aDV2NzA0TVFEanR0d3dIUzhpQ2JFNnpIMTREX3FGbXRMSkhPSWIyZDQtdE1tX3gtZXZyNTE2SHo3ZktGckpMSFFYUXNaajJnZTZhMzZDeE5TeXltSnpRSUtTeVYyWmM4WDhlR1pj?oc=5" target="_blank" rel="noopener">‘Donate a Memory’: Bengaluru-based Nightingales Medical Trust seeks vintage household items for India’s first integrated dementia care village - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOaTdjOWZwYzJScm1lVXhBb05TSkxUNGhOV091QzAya2NtU0NNODNsNll6M1lRaXJLMzlmZjhacmg4WDJqYWhrUy1URUZ1VHhJTGR2ZjFzZTY1dDhka2E3MzlyNlhCRmtQV1pZcDNKRWtIOFRYQnZpVkJZd3FMczBwcDN2bzk0ejl6LXYzUjRHdDhDcUNlRTNVTW1R0gGgAUFVX3lxTFBqRk1BemdKRWZ5NzliVldvS2VfMk1Uc3ktMGQxTHdUWnJiQWhaS1FaamxiNVQ5cW81WnFSdzF6WEhkRUZXY1NaUmFVSHhYWlFaVVRZdm5VRWxxZzc4bDJGV3V1OHgzb0JsdjlneHFVX1U5Mkw2V2F6cUdmR1plZ1hLMmVDS0N2ZzdZZjN3dUM4eXpMMFV4NHlod1hINmU5Sm0?oc=5" target="_blank" rel="noopener">The dangers of being a ‘cool teacher’ - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxObDNfWjhWOFJyMDBqMmtjWmF3WkN0SzZjakZOYVFNZVU1OTNvbXZOUGpGczdFcnZqc3kwcEF4LXBiLVRDcTlJZnRqX1NsV25xMDVmNG1MaVRnZ3h5Mld4RUFhaFRRUEZXLUdKRzlCc1QxMHd0TERLWm1McmpUbVFnUWc4WXhOQUgyNi03dW80SmtUd9IBmAFBVV95cUxPUjcxQmF3Ni02Zm04UHc4M0duUUViTlVURXJzRW5WUFozSzVUeWtQRS1ndkpZZWh0NWZGWmtSRWh6U0FyRzRTY1d4b0ZnU2JpLUZsTHJTTEFUOWpZdlpLYWQtdEstcGF6UXdzWGpMcWhyT3hIMlVzRG1GeUNmY0pWOG5ZOFYtUFhQbzFFSnVoaEx3TmVjWHhvNw?oc=5" target="_blank" rel="noopener">Sonam Wangchuk Hunger Strike 2026: Why He Is Protesting - Frontline Magazine</a></h3>
+              <p class="source">Frontline Magazine</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOOUo2OFZiMTNtcGlvZHhUcFVfVUduM01xa3RGTENYR3pyTlNkMkd6aGVjOUUxclI2ZnFtNlJrWEZJWGNJa19FZGtxRW5tV0xHaHFfU2ZYWU5mMXE3NmNSOG9GUHhHZ2NZaFU0Skk0V2t2WFU4Nl9sZENYMlh0WUVaX1ZLM21YWmxIOGt6TkRnWE0zdzVheE5acUFlTjFiVVl2OHREOWMzLU0xM2NETnozcV83SlA1QTJYMU5OaFFEMWhEX0R0MGZ2c0pn0gHQAUFVX3lxTE5DaGZTSW9jUHZ4LVIwa29MOVB2Q3ZYczVCVzlHN0FaOFJSeG5IQks3V19JZjZ5TVV3VVNiS1BTOG54OVlleklYTXRXc0ZQYlROSlg2a3F6ZnVyajQyVUV3TzNKZnhVT1p6dmdST2RZeHZNSjNyMWp3SG50V25HVlRBbVdCVEQtZVJWNk1SZm5NZzhuVFJvN1V6QXFIMmlETDFYdktOUDNOMnVEMEdkUU1rWGh0LWhKZ0FwT2RzeWdLVXVqdGlBVjc5UVVCNmFSMWk?oc=5" target="_blank" rel="noopener">As Sonam Wangchuk hangs on to hunger strike, weight loss approaches 9 kg - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi8gFBVV95cUxQM1JweTR6N3p6c3dPOWFodE5ENEJHSFFoNTZVLW1YVF8wcmlIU0JQdXpuOGNlMjZfU2hqc3Z4d2x2V2JDYnFyXzQ4SVVSQVpDVW1HMk5SM2dEMUlhb2VlOERWUUV2bVRSRGNTM2xyZTRRWlhPazhOQ2VtSXVQakFNNlRIMldsenUxbGNGSEhWUnoyeWkzRGlDbVc1aHcxbm9UaGZDRVdkaDlKYUJpdVFCVUNjdVY2TkNJaVh5NzFJWFo1X0pobFlZQnBseXk5dEhqb1RYS1l0bUJPWDFOYjNCYlM1U2ZvMXlueEsyZlVIYXVWUdIB9wFBVV95cUxPbWQ1WGdhb0FqUUV4RGpQNTlRWmJkQ1Rld09USEdib3FZa3ZhazUybmcydnV5djhnMTd3ZE9qVjEzU01nUVMzUHNDczZEUW00UFgtcWJKTzJqQ1lPNmF2X3lRTWtjRDl1S1pMNnlSVU9ZMS1Lc0I0bHpxZGZKRFlDX1UxZ3ZyOVpWSDRXTUlYT3haOVpUc2pzczBNamlpWml3ZTRkSWptemplSUNGR1BBRVBUNEdXSzdwYnl2S0VnWC0tUUJGbE5WTWVpTEYxbFlUTVhubXVBLTVNVXU3dVB3Ni1sTnBZenJ0ckVzaHA2TFo1TmtyYW5Z?oc=5" target="_blank" rel="noopener">Hyderabad school terminates teacher who allegedly gave &#x27;Kalma&#x27; recitation as homework - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>NGT court case pollution Tamil Nadu</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxPYWZQNVhrWjNFUkJSVXNKNThNeFhFOWo3YXdoR0tIeHBNY2VLdnlvREJBdnhveXhrb1JXeUtXczVEM2s4Qks1OEFkdzVZenB6N3NNdERQN1g5cHZSajNXV0lyYTJvblpNd2llRUlEVDZHXy02UUdTTVBOZHhjVDJCNFNGVTU1TUZCLV9sZnlOUXVVenhHLWhzVXdhTG43Vm5sT1lWMVVYbFBPeWVOQjRoNHJZbmNNMUZOaExpTHFQZ25pYzZiLS1IeHVfVEZLU0pVS29IV0l4VnE2SFBPN0VR0gHmAUFVX3lxTFBzbFhjSlJoSjhOTzBfYThRbnRwYkl6WDN1VWVmUVo0S3ppNnJaenBLTUJ4M3BTeUUyYjBRYnp0SlBWSm04dVJzVUthWmh0eW85MkZzZFBEU29fakYzQUlRSVd3V3JlMWFKamh3T0xFWkpYZVItWFJSWFVwMTgzSXIwbmNKbWlxSlMyTUNPRWVvRUhpeHNEd2dBYXJZTGF5MEZkQlRaUHM1Mi1LYmJScGVDd2p6YVVfZm1nR0gyc1RackVSWnA5WGpaZ3g2LWdhZWYwLVhDWFYyaEJHYVVqZXY2ajlIcmZB?oc=5" target="_blank" rel="noopener">SC sets aside NGT order allowing reopening of Sterlite plant in Thoothukudi - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#16a34a">LOW</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPQWhwYUR4MGNuX21TUVhURmE0MmxwWWdvSXk3SWNEOEQ4dERHUDZOZ0N2Y2FibDRaQXF3WFMtUHNOcS0wUm82ZVdBY1BnWTJIOWV0NkFiS1Jia3gzS1VBcHM4bGkwTUZhRUZaMWgtWGJIMTJEVVZJYldxOERiZ01ZTWJBZHVsWWhRUnBGZlNRbGlKTHVWQWxVZGk1VnlCbnRZSFYzQ0JzT2VxRkVhcDZOSWx1eWNsSGfSAbwBQVVfeXFMT2VGN0NjUDdWcTdUXzU1UUpRSjR4XzItR0dEdUY0RHNLZmFhYnctR3VCMU1zRUV1UzNXOHZXT0NyeFMwcnZYZ0lFRkdnT2xzSDNnSU8xcFAzYU13ZkE2ekFreDRkTEpvcFFpUndrbVRHSVRUQXYzVENiYnNiVjlOV1lYeWNJVm9OYzBFY1ZRUlhySmpDSGUtd3VkQzBVYllzZm12RVdvUm1nWjhpN042aWlzRGtMMVR6Vkl1QnM?oc=5" target="_blank" rel="noopener">Plenty of cases, but not enough staff for NGT - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">The National Green Tribunal is experiencing a significant backlog of environmental cases due to a critical shortage of judicial and administrative staff. To mitigate this issue, legal practitioners and environmental advocates should lobby the Ministry of Environment to expedite the recruitment process and fill the vacant positions.</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxQckVDMVdVTDFDaFA5dnY0QkxuZlc3UUl6QjNkSi1tQ1N3Tm1wcjJyRVAzN0lteWo4N0tpSlFGaUFXaVotZmxWWUZVc0FubEZOaGM0ay1wakZuM0gwbWZEY08xNHVVemdScjFwRVBNdy1ZTlFHNU14dHVFR2lOU09YU2o4TnlLcjVVcEhBeW5aakhnd2lNb05QQXlmU0NBYnFySTZuNlpPNEdKYVZmQ19RenRrMmdfcGh3c2V6bTJUMUxONE9YdkVNV1pxSHNsTTFPRUZmRWROYVVQdExCY1A4c2NlWnpBNTF6dkFQSC1IUi1kUUU4TG91MlJ4UXBUZHdDaWp3LXI5OVlSRFHSAZICQVVfeXFMT2h6S3A1cVo2Z3VvdmprWE01YzdZeENHV21UMk0zX1dhTHB0UkUyUHJoQ2NXeXdkMHZ1cnpYZFR2blJ0UGU3V1RVdVNOQVdJaG9Wb3hxZ25WaWlpdEtOWHNwTmRzd2M3bVdaNDdVOXowRVdSekdqbW1DODRIMk9ORDcxY242d3g0d2h6MzNoZnJyOEZCbm9rZm5Ma0RvQy1xajVGNXFLek8tNzV0WmNCeDNCZmNiQjhpTmNSY1BjS0NaVHBxLVdVTklWV25BREx2M2dMMGx1ZXIwM1UwN2JUd2RrRjVmdy1WeE84RzJqWEI4eWVzMWtlWnh4ZWZIaW1LMEE1aFdYSTVTakhKY0tQVUhsUQ?oc=5" target="_blank" rel="noopener">Karnataka High Court sets aside NGT’s order against Madras Engineers Group &amp; Centre in Ulsoor lake pollution case - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQb3l0VDVxblVuMmJKQnFkMW9iaE5MazRFWnNZZFk5eTNPRzNaazMycDJqVkRZdDJiRFBrLVN0NFNqc2xTUkFBMnhxNzR2bThTQ2o1eHd1M2JiOVljNDJmYXdVUWs3aGhOR3QtYnFXYTRkRGNSQnFKelZaTjdXTnVabTc4NEQ0Z2lWVlkyZzZ6VzhQV18yZThSLVFEVTBLa3lrU0YxSTR1Wkd1Q0FQZF8wYWkzbHhSQzFGVi0wbzdMeTV5N1VVVGZTLUJrRVdrQmFlVmFSQVh30gHcAUFVX3lxTE5nTWdYU0dTN2JoVDJEOTRnX2FrbHZYd0h2cUVQMmxjMTBtTFVhM3BrTERqdGE3TURUTW1HYURHYVhvZXppT08xeFU4cmFIZmE0dXdIaXBLSzIwekhuTDBUVFNlSUlIcmdLU0lkal9iTW01R3Y2MUM3VTFsaC1yb2pYU2tvb2tIQ0NYcng1M01GQnR1OHJwU1MxZllqdFlGU1duOWtJb2tZek9KOWVpNG13TWswRkZuVlNmV0RVcE50TGV4NFVwX3BBdUFiekdCUzNjYjBSWHB6dE1pOXQ?oc=5" target="_blank" rel="noopener">River Ganga pollution: Supreme Court stays NGT order imposing ₹50,000 cost on Bihar - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxNT2ZEc29MMWFBS003S0IzNFJzVGV6WURKYVM0MG1YWDdmckVWcGpIck5YOVZ0TWZDaDZVLU9VZGxNUkF6NzdSNlFXZnVuMHNJVlBNOVFMLVIwdmVYZnZXdnp0RmhMMldaZU0wUXQxYWpMYzRHQi1ja2RTYkxZUEhNWG9QV1NITzc3WW9GaVV5d3FxbVF6eGF3cUhaRFFpWS12OUk2OTBHV3ZORXJNOE5TTGVNQ2ZubEltLVJJNjM3cFlTeHB5eGRFcjdFN3NpLUdGeGZ6bkdNTWpLQ1AtS280OVZDWdIB6AFBVV95cUxNN2xOeWtzTWNhSHVYOUlTNVl1MkRHZm8zTVZpdlBSWjNJaGdQbEF5TEd3aDR4NEI1eHpoeTZLWGNfRjZkLXVVaGJtVG9QX1plNVJDak1OMWxXVWVyUVZvei04Wkx6bjBJcS0xZXpmazFkdnZ0WmsyZGFPVWxHWXhZNllNekdreGV6TjFuM3d3TzlMNVNXRElXRkVHUThYWE1KWmx2VDBfVVJxcTF1NkJNdGt2M3NmM1JlYUVCOGc4bGZBcnBqQ085dUd6cjhHb1RMRVB5X2Q2eklhM2JCZzgzS2w3RVZEMHhh?oc=5" target="_blank" rel="noopener">Supreme Court clears reopening of Vedanta&#x27;s copper smelter - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxQVnN3ZmhDeVZ5THNIRFVKcmMyQTRaX0xHbUNvaWNhb1JUZVRJVmpISHY2alZZTkpWdzQwVklkWXNxdjNvTHdveHFDQjZTU0ctczNYaHRKRnhxejREOFFvUG1TdURqME5HdWpLR3lnNWhpN3ZNdHREX2sxbnExQ01zZTVQWWd3cXVOMHQycTNHSnQ5RHRKRmhDQnBhQVEwWDJnSlcxZFRlSncxUWpka19MWFNiS09EY3hVS2sxaldoSTR6eTV3Vl9DQ1Rzek4yVkFvaFE2MVRZb19IaHQwZDVXaFBpbVN4SkdEX0gzZWVn0gH0AUFVX3lxTE9jNGFmZkNnaXlMZWVsczJBdC1YYnlVNGtfelNCdnFHQmc4SWJXa0tsZm9WR21JRWsxajJOd243ZWlOTHNDdHRBUTBYeHJfbW5leVNFRlMzd0U1a0Z1dTFpV2xPenJWVklnUllsaHZrb21sQUw1UFJoM0Vzbnc5QTJhS1lDajI1NXlaTzJxVXJFd3c2ejlZQktFMThzY3lNR2xMMmJlcHBZRVRvSmRTQ0FqRFN1WDdna2RPcFp6VHdsaEZmQlhpYkdtNzByaW9DNXhLeEhyeXdNNXpVTENNSXJLUFFPZVp3NUFmOHg1dWpFSjBRRWc?oc=5" target="_blank" rel="noopener">Strictly enforce emission norms in Manali industrial area, NGT tells pollution control boards - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZEdtNEd3c2lSWjlxQUxZWW5UdDFDZGh6ZTZfTnp6RHlrbGw5czVrRWpKZzJ1Q2xvYTBQTVFoUGZlOWpycnN0R0ZGTVd2WjlMdEtUU01XTVJiYWVXTHdFWTdGekNOQ05jbTdtR3BPYlUyVjFZWVptd3oxb2R5ekJ6M19Bc1o1alZ6UHZaNFdpSnVCcTZDbGdkVVRfWnRnMndlYlRqY00wamtObkpaVEJlTmtvZDdmRjR6N04ybURBOUNrcTlPV3lKc2pRMlFDa3ozVk9zMTBFRjZWTGtWTDRoMmdJX213WjloZWR4NHVjaVBpNjhCd19jT9IB_gFBVV95cUxNdDhtSzQxVUZSU3Yxa0pJbXNWNEFMTXpNQ3hDOFptUmdFRkZjQ2R4eWl5cmU1SUkyVzE1LW8xSDFIUU9sTHpZU0tGTEVicGVDOGdpYlNBNTZ2UTJPaFlzWUI2ejJDeE9Eck5yZDNSOHo1VjVxcVVyT1padFZ6S2E1ZXRxQlJNbDNsOUdKTGthUW81RkZYaDlnZEU0RmRyQ3lyQjZ4cDlZNXVUR3E4VjhKYVB5cjlLME83Mk9iRkxzR1U5a3FITkd0a1IyOWZmMGttb1pibnhyMEoxRWtBZmo3NkJJUUgtZnJIM2NvT1NfbXFRd0xZQTVMMFNWT2dpQQ?oc=5" target="_blank" rel="noopener">NGT allows Vedanta to access administrative unit of Sterlite plant in Tamil Nadu - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGIyT2dHMC1yMXRDRHFsTFdxTG9xeTZEdXpGZ0ZJMlYxaW1mcnhGdzBleUFJb3JDSHpQY2JKVjFES1VQbUY0R3pPeVJoTWNsSnNiWlNJSDN6a1lKUDluU2dQREs1TjMxaDVXSmdWaEstdm85LWs3UlNMU2U2cFB5MThaTWRXaTgxUW1ESTV4Wko2YUVFYlA0YmN1bmZsek1yMXctWC1ZbWZocW0zSERVUTY0c1RlS3NUV0hNdVBpZmlRaDk50gHKAUFVX3lxTE1SenZXcHktRWhhNmJMRFhrRHhnSU1DbEx5MEJTdFFGVXI2bHBTbjVzT3lYS19mRi14MGZVX0JiY0F2SXJnWllaRVNnWTFJbGVqTTgxRkVUb3NXeXRFYV85Sk5ETnc5MWFJejdSNkZvVzgza1JrdzBTYjU4dGRjcDB0VDVNX243RjRDQVgtOXY4WFZuMjQtZUx1MC1fRlpaazV5SUY4enJjQkJ5SXNrQ0ljc0JxQnNwbEt1SGROeEtVWWZyQS1zdm9LV0E?oc=5" target="_blank" rel="noopener">Sterlite plant would not be re-opened: Tamil Nadu government - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>footwear manufacturing India</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxOWnJJOTh5eVk0dFpVeGNWOV9ZRVFjVUVEQk1zbnI4ekNyRUpyRmozUzRJTGdzT1R6aUZacnZneXhPYXp4WTRnaXJXck5jNzBvZjBRaG5LUWw2Qm9DMzJ4SUNhcG5xRWkwTHlBM3pXSkdtR0djV3BnTEVPQ3U0TWRRckdZZ1NqYkx3dTBnNXNIR2dzTElqREh0dnI0YTAzZWlxOFpJZ2J0RTZQZ3JPQ0hTd05FbmlVU2pYY2x0N2J5R0ZjZXZwTWZmeF9CQkV4aHJvYjBaZy1hLWFGTGx5S25ldmNIazJqWF9INTJacDZySHFIVElCOWFiMUZnMjlDNGwtZldkYXdtSFQ3UTN1cmpsRE4wVWd4VmwzTk9QQXVJb2ZBOEM1WHZv0gGsAkFVX3lxTE5jV1hiSXBMcXMxY1JVTkdSWHNqS3hlc3VvaVNFV05IUFUxelZaZWZaRnA5YnRZTWgwSkRwSnowajVpLUdzOTdWbmpSRHlaWlNSaGJLdnNuQkN1R3lnTldNNWxYR0hNM0FyY0xCQ0JHa1dwOElteUZrSFk5bUpqVUZWTGpLWWU5VzBxR3NnOXBzSnh5bGR6QTJrTWlRNUktcE00Q093b2ktX3VvRGZwME41c2x6NWdXT253d1ViTi1oZ2tPM2htVU5YSFltTVVfV2F1VlRJTDZUSmdfMHNoNzk4Sjg1bThUYUFHaVF2LUNjYjJ6V1BIS3FBTGtwWkZuWjZlNHhaWjZQbUNsUGVqaFV1eE9JdGFTaG9KVGxRMTRiYkRQWFdCcnh2TW1ZNg?oc=5" target="_blank" rel="noopener">Export boost, cheaper cars &amp; whisky: India-UK trade deal comes into effect from July 15 - How India &amp; Ind - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMirAJBVV95cUxQaENBZHVKNmVaa05JTWk1VmVqM0I0MjhfdWJoSkgtUS04WVViUEZBUGdoeUdyR3VDZVZCYk9NTXRaamRuRWhVWTBUNzRNb1RxWTJWNFdqOFhqa1J0NFZaY0FyNWJlcl94cnd2RWgtNXVRcE4zYXBMLW9KSnBIX3RWYWlQQzcxN3BwOWRKZ1RlME1KM2VjQW4wczhjcVA2Sms0MXVPVEgyOXlLTlpZakU2dGVLU2tOS3FhNG1tbjN3NUE2UzJHc2I5ZF9sTk1Lck40RnE4QklEdHJnbTVFYWpPNl9LTk4zajZPa3RIUEVYdUR0RGlKWnJQaFA2T3NoN20yR1JxaHZLNzFIV2JTOXJ2bWQxLUZkT1pWSlMzMi1oYmJmMkdhTk4zR3VlVDXSAbICQVVfeXFMTk1YYzRBbVdkU2FPWUsxdEczT1kwNGxYY2lPdjJKd01iTlJORUJud25za3NWSkRESndWOWpJRzlZWTZqNnZ6LVlLWDFaRjlzNWozcWhIU1o3Q3lnVWxVN3ZjNnFTQ3BXQmtLWnh4Wnd4Y2JMcml3V1Y4czAwM1Rfd2FoZERxYmF5LUtHUDJYYml6eDE3cWxqU1BPcWZkN3lsY21Wem9oTHA5UzM3VGc2eHRYZEl1QXh2MEdwaEFXYWRLUnlmQVdqbjVOY2ZnaUQyc05aN3hZYzh2Z0NIZTdxcGdMLUJORXV6dkRhYVZiM3FKS0Z3Vkh1ZFJZMFI4bEd1SE9VM3FNQkNWcnd3NmhmTnlaRVJTVDhvWUo3MVBDMFRGNDJnQ25yZGxabElNUzdQYmRR?oc=5" target="_blank" rel="noopener">Perplexity AI CEO Aravind Srinivas says Bill Gates ‘tricked’ America into desk jobs: ‘It wasn’t like the - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxONnRQRHZGeWZldWl0amFyQ0k2ZURYbjJCM3hsZTFETEpEUTF3SE05QjlNc2NoZEdYVm1SX1hpb0otSU1XTHRYenRtbFF4bFNZczNfS1NZXzMzQWlLUDA0S0pjeEdJOVNYWnBnUVhqVXA4NHZwVHJQWjNsS2g5YnpOUFhjMDFReWpYbnN6UDF1SWp1OHFhSk5xa2xTMEpuRTQwLVNaWTlXeldKTXZhMWdkTVJHcmJlNnFEZ2ZGZWNCeV9UcFZESF9KSnlUcU5CM1dlOVhfRDgwX05yWTZ5SlJaUnVQWUdoTWtDcVp3ajVTUFpZMnRnMFHSAfsBQVVfeXFMTkQtUkktMzVNY1VldVdncG1NWXQxd3p6QlY3TzBqbUZONDZLeVRmRzZEMzg3Rlo5dHdFdVhFTDdVaXA5T0RZOU9UWkZOd2U3bDZNcjczSmlGTkItYV9xWVVmRnc5S19peE9QbGdvQWxJaTZsSk5lazY3Tk84S2czaVhyOEQ2aW9ROTdRRnpXR2drUkNGWFhFTDJTVXdGeWJ5OHpQLVl0WGtsRGZJNWtFQjdwVXNMeGpJNEFteVRMNXQxa2lGcjFqbFVVREcxX0RwYzlKR1pRS09zZUVybV9EYVlfYlFGZkgzSUlpVTRDMXkzYTlPbWdadWlqNXM?oc=5" target="_blank" rel="noopener">Passenger partially sucked through window after Ryanair flight suffers mid-air emergency - video - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdWFxY3VWcFVIOUJwVy1qSWhKSXJhTTgzT3NSQzdUcU0tRkdSTllKR3F5ZmlvVGpRSHVneU1DOHNCVDhhY3VYUlA0WnQzTldYSUk4ZE5KeDgzU2MtOEt0TU9kS1ZoOTJaaFByU1lwd0x4enM3Zl9kNTBWdTVqN2pmdU5UTlpTQWNUbDlMVm9KdjNiTjh4eXYtMUVDQlpLaEJWOU40LTdMaUVTZ0ZLRUkwMGxMSTU5WDlxekNIcXM3TUR1NzRVZTNYQi03RGplLW9qSGVRUkhkQnktRlVtd2FOMmtB0gHnAUFVX3lxTE5mc3hfaXdrdGF1VGlmQm9VeUZ1c2pURC1KNjFnN2JLODY1TXlVU0czVnJvRUtsdTFFUTBCZFJKcl9tU0VpNTQyV3BKSzlWVVRINkdScVl3RURlNFJuS1lYQV9STDhsVjJObEZHY3UwN2VmamxSVFV1SGRTN093RjBydlZrQ0NrQ0NsTzU5REQ5QTJkdGhKc2pzVGJDUEQtLWxGYmUxb2Fic0toQXlYNlpxLTA2LVRmaHktN1pQaUZkVERZUHEyRnNEY0I3QTd2cW9IVjhaNTdzTzhhYW5ZVXR3M3ZJcmxXSQ?oc=5" target="_blank" rel="noopener">28 killed as massive fire engulfs China shoe factory; Xi Jinping mourns &#x27;heavy human losses&#x27; - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxORmFuUlBQY3FPcE11bWo3eDNFMVpwUnktcU9OaUk0NktkdmNPdHdsdlJ6MnFnMEJFdFVHNm5iS01hNDNqcXY4c3J0cXVaNUZzZ2xJckN4MGRiM1pvNzktXzZFdHczR2dUT2FUcTRuRjBjT0ZrekRZdXBNSEJnRXRwelAyWVRPdmZQOXhFQXBpTE40dG15em5La1VTaXpObTB2M1djMGRVbGdCbWZsUVNKV1l0Vmx0dE9iZWp6WmZxU3FfM2ptWWw1RFQxdkNxeTlsLVNmazhob085bGhMZzN6MjdpRm5WbGdlQjFoRnBHbXYtTmZVZ203WWlkN0g5RHhfTmJEeFE0ZUgxdnfSAZICQVVfeXFMTkVJZnkwaWNEcGxJN0pHRFRJU2FMVDktRnJyMkN4bVdBdFZQWFZWaDBUQnFHUmNzUTJfVjg1Z05EaFFZZkp2Z2JuWXRMN1lMZGJEc2tHbTBvMFJreXNaSl9NdWNzM0ZkSzV5UHhSbjh6VE4xalE0S0NRaVRwd1BMMWJBRnlGNnZDT1lyZ0Q2SzNCQlp1dXpYYnhDS2hCZkowN0tYUUZQQng4OWMzSnFEMGVVRlh1LWlWYmdEdWpKTzVtd3hvRllsQkJydXZFTUVwcWZkOVNNaW9uZnJBUWZrS2RmQ0dsc1FzRllBQmNWb3AyOXUwUEdXMTNlOTdZTDJnV2xjaEhJTTMwSmRMbnphVllQdw?oc=5" target="_blank" rel="noopener">Economic Survey spotlights Tamil Nadu’s efforts to foster footwear manufacturing and education at the doorstep - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQOTVIbGlpbTd1b2szWkI1OFRNdThlS1AzU2JlZ2ZvbDRmUmVqSDI0OHZaQy1wT3VNM3FsV0tJRkVqcFlfVml6YnhZWlB0MDFmZGoyX0RCUl9FSF9SWkxiRUxNcEw0cDhMeDlsTVhoVkZxR3I2Q0VaR2NDcWxMZ05SZDBMdWdQbmE3b1BOZmlFLU4zbzhJMVZPRGhIUHd4RDhEV1NkSUQ5eVNkU0Vrd283OXF2SWpNZzTSAbwBQVVfeXFMTmRYbW1RRmJGa3BNY0dvdzNyMndIMU1kVDJ0SnRvUVZ3SUE1YlpYdkZYWWZIdl9kX3c5WE1tSHVfN1JzX0tJWElueC0xRG43Z095WmtaLVFMb2psU21EbDU4WWhteVh0aDlsbVlZRVlpdmVQYXZ3M2xpWVRsSVF4Tk1XQ2MwTDZTbFVic1lfcUpfSjdzaEhfYVdCYkVKWnE1eWNhUFlGUkc3RTZVMmthYXdJS19LMkE1eUpBcGU?oc=5" target="_blank" rel="noopener">US tariffs: Shoemakers take measured steps - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZ2xndWNVMVpLZV81TUpSX19xMi1YcXJFbWNsSEo0dm9WeDRtMl93ZVhjWXotb0dRelpEc0RJR2dodkIwZVVCRVlxdllqVkxjUWFnU0syZDhfU2YxMmo3b2tZUGZ0ZmtpdDZlN3hvamNFemprVmY1VktxTFc4eFNkSlRyY3JZNzRjeHY1ZmdEMkJMOENITkJkYzFBcnlpQ0djbzdaTDNnc244U2pNNU02LVFHZnJTZTZ4aHBKemxVb1lFZ2xLSTRaWUVWbzNoNlQ1Z0dKcXpOcmpWaE96Ny1vQmhxZnHSAesBQVVfeXFMTm1nSG1UMUdTdnp6R1RTQ2RncGYzLWREZ09yQlk5NVNqcFgwUVk0YWdjNzctazRjZldiMFA1M2dudlk5WVdoWnNlZE1CemR3ejFDVWJyaEVzcXhsVEVla3Y3ci1fbFJOdW9ia2VHSFhBY0NTaEpfd29vblB6aXhEVEhUVlRlQkRtVEZjVVp6Vm4zVHZQOTI4Y0RLbTJadHFlc0xYNjNfNGlGLXl0WEliVTJjbEJwbzFVS2pzc1FNa3VBTkIyNjJHTEcyT05SS0NRRnAwcXVLUEdGM3cyZ2doYnpkTVRoMjQ2anpKZw?oc=5" target="_blank" rel="noopener">Tamil Nadu clinches deal with Taiwan footwear company, signs MoU worth ₹2,302 crore - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNQm5XTHZNWnZxUHllMW5VeVVfazB1ZWdfSDFqUTlfOXV6a3lBeU1BakFNVHU2dy1NTUtXc2NYOGZzbTh3bDROSzF5Y3JIVERscXh4Z2tESDRIZGszM19IU3NZZGhBSXJyNGRvdkFmNDE0VzJ5My0zSHJ5Mk9PS1lKMnVzTjJsXy1wdmlzNmh6Vk1YRHNYcmFPMEM1Qm9DNWR1UjUyMWlLVnNPTVdrYjR4a1FsbF9CSVBMNHlVOUYxVmZrYjIyVlZJ0gHOAUFVX3lxTFBidUV4UEtvNEJwVXVnd3piTW9ZTUM3NFhRTXJzRmlzQ1hGTHlRcnFwV0tiUG5tSVBNeE1TRG5LS3VqVEJiVTJ5SnVMOE5qR3UxczNOeERfcm9jYWZOTDJjU0tVYXZOdkJaVGd3WmJFSkVwU250SnBEcEhOaVVzUVRES1FrWlBHem5jazBkcmR5VFczeS0zeTQ4c2JsaHhmc2tMMWJ3dnNpNXRsWEtXcTNlWFQ3Y0l1cHVQYnB0TkhobTZGX19GY3lVU1hmdlhB?oc=5" target="_blank" rel="noopener">BIS organises awareness session for footwear manufacturers - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>export policy China plus one shift India</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMikAJBVV95cUxNYnRlM3dVRTdUMzliVXdHVEZwUWVWOGhJdHRYeWh6Q2V6VDdydjE4Q1l2dk5BaUFmUG16M3djQTdmVXVZWW5IbE5qVDM4dlZfVU9NbmNVQXdJVjdGdUJBMHJuUWZzcVpwbmMzWEx1ajNZU3I3V1JKdWJabS1yWHR0QlZ0cGEyeHo1MkQzcEtrQWdhWDVyQzhHRC1nSFN3QXZqdjZ2djF5a1NCWHJKTE5GMDF5d2FMTUstLW5rcVg1anRYTUp4RDR5QWZ5cy1TbGJfQm9YUnFkQnZVNjF3TFdkYlo3MmFBZEdUUG1HbE56c0lZVG5jemhXWERQbVVIak5pTTkwME9rODZEcXBpWF9nedIBlgJBVV95cUxQQXhsMlpwMm83UEpqSE1IOW5MWmp4ZkxERngyMXNzVXNUZEljV09qQ1haQU5xcEZTUlVMZEtjTl9IZkMxU0gwU2JfdEh6X2xMSjhOM3hMSEpQQ0kxcGxvbFd5OGgzZ0ZLVUw2dUZHclZBdGV4SkRncmhYVkN6TkZGUkJacjJQLVpwSVVmRFZyYVZ4WG5reklwSl9BTHQySFlONkl4VVA0eEgzR1JsNTFTU0lvcFF1QUY2TmZfdm8xNFpXU2FQNzRTc2N1QjllaHloU2J6YUpWVXVSVzZXdk5OT0ZhaFNpcV9fM01VVXdNdkpsUy1qSXREM1VKdVg1bjItY3NlWkUyMnI5SjFSVXhtdGhqMUkwUQ?oc=5" target="_blank" rel="noopener">China&#x27;s economic growth slows to weakest pace in three years despite export boom: Here&#x27;s why - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxONW51WTRHdWI0TzRxVkRKVVVtcEFSX2NmY2l5QmpGTXFLM3hEVzh1SDVkMEZSMTIzRW5MRWtpUVIxWjdPSmhSSUlTMndlMEZYZGNNLXpEdmlBVUFQS0pzM0tsTk9xVmxqRHU0QmlBTGNXb1dnd3pwejhLYkFZaVoxLWoxa3ItcG1MSlBvdGxmNmVHelhldmJhSmdWUV9ySFRlaHpIU3h4Nm1SRDM5dDdPLXFZeHhJZ2_SAb8BQVVfeXFMT3QtdmtqVV9fOTR0b3Y2Z1MxQnNWYmxKam01MHZKQm55UTFZNmN0WXpVTHVGUHhzWVNWTENyYXE2SVVFRGNRWGVhaTdqbmVjZkctY0pua1czYU5zb2RIV0I2OW80Q1JJdVRDMk1XY2czS2RiYkRENHVCV1ZFSllPUXM3WXVYaWRvOXQ4SmJaUmRNcEZGZm9Ea25BbHVzUkR2RkIxVC1YaVVEUlhfSXRWNjJtMjIzVndaeGtoVVNjM0k?oc=5" target="_blank" rel="noopener">India-UK Trade Deal Kicks In: What Gets Cheaper, Which Sectors Gain Most - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPOE8xdjBOdW9uMWtpSUZtSG80eDBMRTJKSWRDRTczSHZ1NlZSekhNaHFNSGM0emZoMk1VdlJRY2d4Vy1ZTDJwUHNjekp5T3NwVWVvQ3FDSjJTWTBPeWkwQnFERkNXaWl2QTd5Zm16T2xWUDEyak95TGFlckI1UVBLalV5dkVkc21jQTdFbGtzUll5Mk14dmp0MWlIdVNBVWk3YlFfd1lBVmVQLVFJ?oc=5" target="_blank" rel="noopener">Opinion | A Quiet Indo-Pacific Revolution Is Underway, And India Is At Its Centre - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOeDRXZFhHODRNTUNITW8tVF9UNTc0b21hT2RjZlAyRU5QcFB2c010YS1pWEFiM0daeTZDNzN3cjc5VmtTOFVxa1pGMlZoU3Y1ZTVhSkZRd0lMRXRkTXFpVnc4VnNDSUhpMEVXazNsTWVjcWRQZmExa0VNb3JfYnBPUTRZVFRRVWhoeVg3cVZMTmsyVDdWQXVfYnR2SFJVbnFGUVl0X0oxSENtdTM4QXYxejlaLW02OURkMjRHVlgxTUZwcmI2T0tVTXNETENLZnJJS0dLZFI4REwzdkJtaFdwcGhnY0xUckpaTHFhVTByV2ZlUFp00gH6AUFVX3lxTE5jR2xSTmpzOVlVeVNvNzF2dkhpX0o1VmRTdzc2bzk0TDdBUVR5TnhWQlFfeGdfRFk2WUE4NVpGalNtUG8tSmxyRldVS2lteTRpQnpoUzY0b1o3dVlfa3I3U0RlVm9ucFdpQ2o5M2VJR0JLaE9uSjFTQlR5eUJvWHUxY1NSNGNPWTl0ZkUzd0diWHFaMDVHME42dGJCSG00MVlqZ2RpdXE2ZmdqQkVZUjJPdnUwR0JYOEtSRVNGcG1vbkZBdW5XNXh0U2RCdllBZm9lY0ZwUjRUZkJWQXV4SU9lcGxmcEl3cVB6cy1nVTBLb2F2cjJaQWYzclE?oc=5" target="_blank" rel="noopener">India-UK FTA: What it means for India’s agriculture, farmers and MSMEs and other sectors - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPZGhWTEVMUXBwenNmQzE0cnJrRG9sdVBFcmFrQTJKbTZEdzQ0eVdFUGttNS1mekJmdkFSRXZhMkNjY2g4ZHhKMmo0SkZOOThuTnJtektzOU5FOUpfVkU4cHpkYkNySUVHWGZmYW1jOS1CRm5HN0l5blY3Z29tRzZET1Z4RktySk12X3VmX1VQTzI5dWhGcGMzYnp4RG1rcVA2LW14T1pOaXQ4THlWcEE?oc=5" target="_blank" rel="noopener">Opinion | China Now Has 7 Of The World&#x27;s 10 Biggest Banks, And That Should Worry India - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZHlQdTVScm5WWEhybHNZWmczNTFtSG5wWGdmbEpNUlNZNWE1WXM4WXhqeG9xeVJMenlpalV1VHRBMVM1ZWJEUFp1aWtjWURCLUptTnB2ZFVXTTBzNG85X1N2VnJZdFpJcS0tUDRJOWFBYTBsdVl6VUNiY0I1TXVmbkwyMDNLWVlQR0FhQlM3VlFCMUlqVGRnQ0tjcG42aDI0YzNGWG5tU2s3OU5vaVlfWGVudnNQM192ZWY2QUpFMWNSR1pFaUFVV1B6TC1KOXE0VlN0Y0ZlQ01ra2t4V2tIRXVB0gHnAUFVX3lxTFBjRDlDNFF5VXBnSUhYT3lCdDBuRXp6Y0xCWk1mQy1BejF2SkpRaUJxNkkteEtwSjhxZkxyQXlGYWtCZnpBejR5YVpwb1pyLWRSYTNBNWhjYVppclFkWW9EWHJvT0xRNDJfOXV4LUdPR1oyNEtYZ1dvdnFDNkdZUDNpd21Ecmpub25sX0RBQWtYV0hRTHJNMHNPaWltWWZoU3pRZVVOdEdiT0hKLTVLVFYycFdzZlA2WHdtcVhMNFBtWThmM0NULTVTQ19MQmloRGppVW9pVjlvRW9SOFJORERhd1lmVUJQUQ?oc=5" target="_blank" rel="noopener">Supriya Sule rules out NDA switch, says NCP (SP) yet to decide on Delimitation Bill - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN2N0bU55N2Rod2V6QWJWRS1mRk9sQ1FtN0p2RWZtZm5Od2RocG1Dcm5yUFZFRExrTnMyZEtZdUVCNnM2dURLcktmM2J6d0FFVV9rRWpPLXJSa2w1S0tudVBkWEc4MWRVdmU1WnJnUXRyZGNKakVVbjhaMHYtdHJxNjN0bk56dXNrTktpd3RCOU01RXFBcTBqUE9pWUFsMi1oRjdhSDhSaWhYRFJ0RjNDMUJnemtJbVJCQkRQc2MyQ21JNGxvR1NXM1lHYi1BWFh2QTJ3RmVxNznSAd4BQVVfeXFMTmpJM3M1QnlabnBfN1BmSHRNQ1A5M0ZVUnFqaERpN0xuMGd5M1Y2eVZTbUhoSWQyMmJWa19TbHQ2RGI4dDRzMV8yUGZUaVpycG9yN3NiY1hiNWM3UE53Qjc0Uk5kYTY1OTc4Z1JncW50SWRnY2xTRHpEOWVMcE1sc3ptRXpfbmRydFpMc2JZY1I2VlFrcEQ4UVJacUpEcHlsaFlsTm5qYmlXRDFWVEJxQS1qSVhNSl9UMUlPZWs4aDJkUEdBU3huQlJZOF8xTTZzZjhzaWVBeW1vRmRUMlV3?oc=5" target="_blank" rel="noopener">China&#x27;s Brahmaputra mega dam: Can it control river water flowing into India? - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOM3hwQkktcGRfb1ptRWkyNHk2dV9XdGVfeGVHbl9vYy1QU2dtZ3EwT2V6U0NpWnp3emNEV29lcWFTYnMwRDdQOVBPNi1MMnFEc3NqUHNPMmxFWkMzbEZDZHNPZW1keVktbE54ajlWRkFJa0FZb3BLTHU1SmxYNzNVbUpiOUhPZktkR1JNOGhnWS1HenpHWHVkckoxQTlMdTdWdUprMzNiVWlCQXBVUTcxNzZsZFFTNmJKRUF2a1FB0gHEAUFVX3lxTE0zRWItS2RwTm01WXpKOWFqaGJBN2hBMWxVb3hUWHU5a09ZeVVSOWlFcmR1VUREenB0VkJXMWY3dzBldmFlR2lYWXVDN0xxSGNOcXJjMWx3OTlvUlJEQ0lKX3RUZGxfRlFjOHhrWlJxZlRTeWgwaDRHXzR6dmtKLUtFcG5nX1hDSHRSX1Q2d1BOSG5NSHc4SHhUTkR2akp0bVQ5U2l6RFJ1SUJIT3RfZGZXeW1RNm9pNzVmTmgwMFBhN2RIak0?oc=5" target="_blank" rel="noopener">Why China’s 4.3% growth is worrying its government | Explained - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div></div>
+        </section>
+        <section>
+          <h2>labor law compliance update India</h2>
+          <div class="grid">
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSTh2V0V1UWRqd0F1UXZTSkd0RGYtVjB3SFk0ekp0WXVLYU8yZC1IRGgwVFc1aVFPbU5oU0l5a2dCYU9rT3hWcDdJN1pjXzliWGhtQTd0V3czY2JjSlpPX0lneHUyREMzVjdBUnR3SHRHZE16eGFNS0pKUWkwTDBVMHBfZmNlVXN6MWl4WnhoSXZ1QmgyN1FYb0hBRU5hMXhrNzllSGFPZDQ4ZlpJZkN2SjlFV0VPVzRna3g3ZElTRnRkYW5lVW5lTlJ3VWFYSDB0STZjbG5NbGvSAd4BQVVfeXFMUC1lbjdzaDV2ODdVR2VZbE1raENPUDRDRzFkT2tVU3NJQzlqR09LeU1UdUhSV3p6R0dXbEE1NEtTVDVMVW1iSllnMUhFOWhpQVZVb1VoajQzNURxNlJnVlRKSEZ3dXQwakVfb0kyUXd3UXF4NGRqMVRMUlNaVmJjN3RwUDVxQXhkb05Gb3g5ZV9rQU5TSnExajYxMTlkMmpsZnpXeDZZY3djMHhTRE9TTTVZN3RaUmtIMkFFcS00WnZvRjd0UUxBRGFMbGNJUWd2RTdRTUpFMkcyVk03QllB?oc=5" target="_blank" rel="noopener">Vietnam boat tragedy: Phu Quoc chief rejects allegations of delayed rescue - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              <span class="badge" style="background:#d97706">MEDIUM</span>
+              <h3><a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxOWnJJOTh5eVk0dFpVeGNWOV9ZRVFjVUVEQk1zbnI4ekNyRUpyRmozUzRJTGdzT1R6aUZacnZneXhPYXp4WTRnaXJXck5jNzBvZjBRaG5LUWw2Qm9DMzJ4SUNhcG5xRWkwTHlBM3pXSkdtR0djV3BnTEVPQ3U0TWRRckdZZ1NqYkx3dTBnNXNIR2dzTElqREh0dnI0YTAzZWlxOFpJZ2J0RTZQZ3JPQ0hTd05FbmlVU2pYY2x0N2J5R0ZjZXZwTWZmeF9CQkV4aHJvYjBaZy1hLWFGTGx5S25ldmNIazJqWF9INTJacDZySHFIVElCOWFiMUZnMjlDNGwtZldkYXdtSFQ3UTN1cmpsRE4wVWd4VmwzTk9QQXVJb2ZBOEM1WHZv0gGsAkFVX3lxTE5jV1hiSXBMcXMxY1JVTkdSWHNqS3hlc3VvaVNFV05IUFUxelZaZWZaRnA5YnRZTWgwSkRwSnowajVpLUdzOTdWbmpSRHlaWlNSaGJLdnNuQkN1R3lnTldNNWxYR0hNM0FyY0xCQ0JHa1dwOElteUZrSFk5bUpqVUZWTGpLWWU5VzBxR3NnOXBzSnh5bGR6QTJrTWlRNUktcE00Q093b2ktX3VvRGZwME41c2x6NWdXT253d1ViTi1oZ2tPM2htVU5YSFltTVVfV2F1VlRJTDZUSmdfMHNoNzk4Sjg1bThUYUFHaVF2LUNjYjJ6V1BIS3FBTGtwWkZuWjZlNHhaWjZQbUNsUGVqaFV1eE9JdGFTaG9KVGxRMTRiYkRQWFdCcnh2TW1ZNg?oc=5" target="_blank" rel="noopener">Export boost, cheaper cars &amp; whisky: India-UK trade deal comes into effect from July 15 - How India &amp; Ind - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              <p class="analysis">(AI analysis unavailable: HTTP Error 429: Too Many Requests)</p>
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQUkY5OXBpclpvUVU4TGRaM3NidXVjLTVsNGlYZWo1MU5ibzJlUEdnMEZJYkQzQXhwcTJNVVF1RVo0dDBiTl9iY1ZiWERfSG5UUDFlRTlLMGtZLS1kOHJDZjU1SDZUbXBsNE96V2FocFhLeDZRUFdEZmJhcmNaelBWdEdyS2ttMzVhNjBhVzBDaEZ2SlB4YnlaNTczbmR6dTJSWHU1cGZPVWk2cmtKajZLZVBWcVB0UmtKbGZKVXo1RkdQZzV0TGN0c1loVEZOa01TeVdib19zT29WR2ttZGRqOW9R0gHoAUFVX3lxTFA1NjdBMTNjbm1mc296OFF3RG9OdXdCSFBuNUFhZE9XcU1rcFBLdkdFazQ5X2JTS0pTOExQNWtFQTc1aWRJVzg0aHRqTlpVVTJfU2VHUmlrZE5MQXpHNklBWHo4M290T1A1MDlqRjBMYkdRNDBKMVVZTklUQnQ0dENJbkRfZlVSODRXQlR3RHdSeEdicHBGamlHcV9rRzMwQVRLOXEyTl9zV2VmZzJKcWFrdTJFTkJDcVdiZTZfSkxIWnhRZnVUR3N6b0pjbkVaZGZqOEJFMEc0YmxTZlNOSGdxM1ZIMXpOZVk?oc=5" target="_blank" rel="noopener">Worker rolls shrink by 67.6 lakh in first fortnight after MGNREGS transition, finds LibTech - The Hindu</a></h3>
+              <p class="source">The Hindu</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi4gJBVV95cUxOMUhhbjdQd2M3ZkVyQ3VKc3Y1THNzMHBJZVQzd0lSYXJYNXpZMldJV3VENmotRmtKb0JQMmN5aDMyNnRfSUVGQ21fWmZDeFlXRnQ3b28wVXFHMTdaMDhZby1ZVGh6SE9kdDJZa0tZVFFacWR0dk9kXzE4NEVERWZGMFJHZml4Nm1EZnlzTVZ2MHViMDhaMVFPcmYzT1ZuSzVCUXRQQjc3QTdYUGp6d2diaW8taGNZOEkxRUQzNGZrM1hwWFBrMVpJdzNfWkpqem5vY3NWc0NaWnV3aWR2YkF4YmdiTGlHdlllbUFqNGZCYUctTEN6VWwtdHFrdE01OHBwS2tTTm96RmtwY2FkTHk4TkF5ZUY4MHNDVHUtZW5wa1hHZXZCeVd5TEhRai1EbGgyTnBuQ3VFNWdPaFBHMWdqTlY2N1NfejRfSE1jcnBMQmxLVTB3QmNYcGphcnVGZnNYeVHSAecCQVVfeXFMTWlSRWRwa0ZsdFRXTmVRNGVhYmZ1ZXJKejhObEZxdjNCb21jMGRpV3E5NGoxQ0dManRtNFpOT3dZRWktVnNrS194eThPQU1BWGpNVTRTeUFSbEFtTzA5ellkSkpZRGd3MDg3UGVJdDV0NUZ6MGpKU3RNWEZOdEtxdG5QRW56RjRaLTN3N1lBd0h3VXQ3MHkzeVllb3R4MDFOUEE3R0FNX3N6OE1zbXdPVllncmpGWkFXWGE3VkJGWlZ1QkxXX1FGZGJxWGg1WXg4Q2Nkd1E3Ym1senlaNDJVN2haNlZnNHNuRXNyYS11dkhhcF9LRkhMVUk3NUFBazdZcmI2OWhhd29HY2tOMDI5MHdreEdxQUhTbW5SRnYtZHNHekJ3TzZERDFsTm4wTjAwd0dwWU9tc2RTdy1YbmlvUGN0RFozTjlXWURPZTRNTVp4dlZfRW9sSTlmRk5GUE9CNXBvSWZGalk?oc=5" target="_blank" rel="noopener">Government considering to take legal action against unauthorised screenings of Diljit Dosanjh&#x27;s &#x27;Satluj&#x27; - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOeDRXZFhHODRNTUNITW8tVF9UNTc0b21hT2RjZlAyRU5QcFB2c010YS1pWEFiM0daeTZDNzN3cjc5VmtTOFVxa1pGMlZoU3Y1ZTVhSkZRd0lMRXRkTXFpVnc4VnNDSUhpMEVXazNsTWVjcWRQZmExa0VNb3JfYnBPUTRZVFRRVWhoeVg3cVZMTmsyVDdWQXVfYnR2SFJVbnFGUVl0X0oxSENtdTM4QXYxejlaLW02OURkMjRHVlgxTUZwcmI2T0tVTXNETENLZnJJS0dLZFI4REwzdkJtaFdwcGhnY0xUckpaTHFhVTByV2ZlUFp00gH6AUFVX3lxTE5jR2xSTmpzOVlVeVNvNzF2dkhpX0o1VmRTdzc2bzk0TDdBUVR5TnhWQlFfeGdfRFk2WUE4NVpGalNtUG8tSmxyRldVS2lteTRpQnpoUzY0b1o3dVlfa3I3U0RlVm9ucFdpQ2o5M2VJR0JLaE9uSjFTQlR5eUJvWHUxY1NSNGNPWTl0ZkUzd0diWHFaMDVHME42dGJCSG00MVlqZ2RpdXE2ZmdqQkVZUjJPdnUwR0JYOEtSRVNGcG1vbkZBdW5XNXh0U2RCdllBZm9lY0ZwUjRUZkJWQXV4SU9lcGxmcEl3cVB6cy1nVTBLb2F2cjJaQWYzclE?oc=5" target="_blank" rel="noopener">India-UK FTA: What it means for India’s agriculture, farmers and MSMEs and other sectors - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdXYyRFVXNHE1MnNOLVNsbWMxRG1SR1BQNnA3eWpDOHU5RHljcUttSDByTndobHZyNk12WkxnUWlBMzBJNVRtTjhveW5PdFBCRDRuSmtSSXZwaWpjTDM5RUJsYnZhQ1pvakRPN2VfbGdyZml4ZTgxSU1yaEQ4MTNQOVo0RG9OaUFPSk5yZXd3SXBxd1N6MEdfUDNZbzNfWjhmc3ctamtqVXNWeVp3amU3ZHBWRWFOZU83QVRMamdJcGRlY0dYTkVRWXFVbmVBTHl2T0EtSGxZbGnSAeABQVVfeXFMT25PR2R3X28yWHNadGhGTEFMcTVKNDVfaTNpWnpmOVVMVzNMUUlYOVZyamFtRi1mRVVjeldnenBJQ1YxV1RwSWJycVNGV3kxc1lNYTNGdmZqLWNaR2RYNWtuZHZkWlVtbkk5RkwzZDVZM3BaUmtDRk9xc3FmZkNfa05rRklReFpjRWNJeXIyS0NrcnZCS0I4MEkyVVRhU2drd3dSbHlZbmE3UW5nRlc4VW95NUVsYUZUazZsbjVmaWt1cjZPcUR0RDljc3BRY24wUHJYbGNkWkFKbkVqY1oxTXg?oc=5" target="_blank" rel="noopener">IndiGo Employee Resigns After Allegedly Being Asked To Touch Supervisor&#x27;s Feet - NDTV</a></h3>
+              <p class="source">NDTV</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMioAJBVV95cUxOMVpFYXl1Y3RwY2t4WElZdGNyRHU5RTN4Ry1QbnJWS2Z2ckoxRUhGUjRJbEtZbUFhNlhJQ0diZGxjQ2QxNXhTbFlna2NnMUdKTjMxVWlkSEpuNHFvV2FRTE4xSEE0MnFWYUtGUHB0T1J4VFlLcHRmaW14R1puenV6ZUFLd0JVWG9lcjgzOEtyenNUX1VKaTNzOGZBQmJYLWdURkFmV2VHNC15ZmhLeGRSMTFwSGxjT2ZoOUxublA1RW1ldHVIOHJLRjVERTREcVE3bE9GLXVkaFphaE1QUzlEUGltOXEwWnlRSVNOSkRwWF9EU3VIQjJpdDNxMHYtQ0hoWnpmNGdnZ1JydEF2TlpuYTE4OUtPakVwV2VmdmRJQ0PSAaYCQVVfeXFMTWdfaHhYOWpLM01SLUZ5OFQ4NFdlRlFzUEpscG5XMFl0VUFEazJwTFFLLW83Tjd3bEZWSVFGaTNiUVA0cHFkeHZZTXNxcjRLOER6WjZOZWtXcVJkLUxRVDY0M0E4RHAtdjA1VGIxc3BKZktiUW1nT09xbklmSlU3Tkd1UkZlVFYtZFNjY01SX0pfVlZULTJhWkQ0QXdHNWRySnJjbk1sU1puRGxuM1dvU0VLb1dGdTQ4aXBqcW45amdKdDhGdHZzS0JqMkE1UXhDWVFXM0NmbTV3dTRyV3NyWEdhaG1pZGNqWFAteGZfTlBHZlpRRzF5bUFteGdsRV9ONm1rMV9qaUtQa0tEcjFZUFd6U1NUS0NzUXhZWHhTaVI2SzltUjFn?oc=5" target="_blank" rel="noopener">Nashik highway horror through daughter&#x27;s eyes: 15-km chase, SUV smashed, family attacked after mother obj - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div>
+            <div class="card">
+              
+              <h3><a href="https://news.google.com/rss/articles/CBMiigJBVV95cUxQZnlkcWJHUmNmYTVId24xYUdlakE5U3VtWWg4SjMtTWswNWdQRGxob0EtZTlIVUN0Y0hxV3NyWkNxaHFmUGFWSldXN0ZaODFwNWNlcjF0VHpBeWg1UTdneWhUVE1RNHNObm1KM0RXc2RXdXR0b0Yxa1Nid2VMNjVVeEppOUd2c1RPTUZCOFY3akE4SkR5MjFYam91TjFNSWswaVNZLVFRNHNycFkzRWRTeFRMRUF6NlRFU2k4MjEzWkl2ekxoQjNxODF3RnVnVHZyTVVGT1J2Y1dGSjVrQ2lpbW9OTVBkU0V3emNyV0UtMzdFbUQ1NDR4V25MYlJBa2ZEa2JxV05jdEphQdIBjwJBVV95cUxOSmNQUTYyQ1hTWGtaTXBfQnd5UF95WGd0VHU0QWc5cFhJQ3I2Q1pBNWRWNTFGTk9iSjFvcTFMX25xc0N3MUg4djVEOWlhX0Y5eDA4ZXY4cG8wT0xqTmNhY0JmbGVoTUs2dHFqVk8yM3ZkLVF2dzV5Sk5ISk9WTThOVEtiZ2pRNUc1M3dLa2ZzZVRVRUJwd19DRGd6ZnJLSi0zbVJOMDBEY244Q3JQb2NVTUY4bFhHbHc4WEVDaExjUFMwMm9nWXVVTEpOUU5FUTBMZXh2RFNHNVVSbUgzTU1yVjVRVHk5LXZld1ItcGk4bW9fY2VHbG1ocWRMdzFUOHhCX0I3UktRcHBVT2pTclBn?oc=5" target="_blank" rel="noopener">Why don&#x27;t antibiotics work against viruses? Understanding bacteria, viruses, and antimicrobial resistance - The Times of India</a></h3>
+              <p class="source">The Times of India</p>
+              
+            </div></div>
+        </section>
+</main>
+</body>
+</html>
