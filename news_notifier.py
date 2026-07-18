@@ -28,28 +28,50 @@ from email.utils import parsedate_to_datetime
 
 # ======================= CONFIG (edit this part) =======================
 
-# One or more keywords to search for. Grouped by your 4 tracking buckets.
-KEYWORDS = [
-    # A. Power & Infrastructure
-    "TANGEDCO OR TANTRANSCO",
-    "power transmission Tamil Nadu substation",
-    "HT connection industrial power supply Tamil Nadu",
-    "electricity policy Tamil Nadu",
-    # B. Government & Policy
-    "Tamil Nadu government order G.O.",
-    "SIPCOT DTCP industrial policy approval",
-    "TNPCB environmental clearance approval",
-    "Tamil Nadu election code regulatory changes",
-    # C. Risk Signals
-    "power shortage Tamil Nadu",
-    "infrastructure project tender delay India",
-    "land acquisition issue Tamil Nadu",
-    "NGT court case pollution Tamil Nadu",
-    # D. Industry
-    "footwear manufacturing India",
-    "export policy China plus one shift India",
-    "labor law compliance update India",
-]
+# Keywords are grouped under 4 scope headers, shown on the website as
+# District -> State -> National -> Global sections, in that order.
+# Each entry is one combined search query (individual buckets/words from
+# your list are consolidated into practical search phrases - searching
+# every single word separately would be hundreds of queries, too many
+# for a daily free-tier run).
+KEYWORDS_BY_SCOPE = {
+    "District (Kallakurichi)": [
+        "Kallakurichi district news",
+        "Kallakurichi collector district administration",
+        "Kallakurichi industrial development investment",
+        "Kallakurichi power electricity TANGEDCO",
+    ],
+    "State (Tamil Nadu)": [
+        "Tamil Nadu government order GO notification gazette",
+        "Tamil Nadu cabinet decision policy change",
+        "TANGEDCO TNEB power supply substation outage Tamil Nadu",
+        "SIPCOT SIDCO industrial estate approval Tamil Nadu",
+        "Tamil Nadu land acquisition industrial building approval",
+        "Tamil Nadu labour law industrial dispute strike union",
+        "Tamil Nadu pollution control board environmental clearance",
+        "Tamil Nadu recruitment employment skill development",
+        "Tamil Nadu district collector RDO tahsildar revenue",
+    ],
+    "National (India)": [
+        "India GST income tax budget fiscal policy",
+        "India RBI interest rate inflation MSME subsidy PLI scheme",
+        "India supply chain logistics port shipping disruption",
+        "India labour code compliance factory safety",
+        "India footwear textile leather apparel industry",
+        "India manufacturing plant expansion industrial investment",
+        "India national highway railway infrastructure project",
+        "India cyber security data protection DPDP act",
+        "India NGT court order environmental case",
+        "India ease of doing business industrial corridor",
+    ],
+    "Global": [
+        "China Vietnam Bangladesh manufacturing trade shift",
+        "US tariff trade war India export",
+        "China plus one manufacturing shift India",
+        "global supply chain disruption shipping freight",
+        "Nike Adidas Puma supplier factory expansion",
+    ],
+}
 
 # Websites to search across (applies to every keyword above).
 SITE = [
@@ -65,7 +87,7 @@ SITE = [
 ]
 
 # Max number of articles to include per keyword
-MAX_ARTICLES = 8
+MAX_ARTICLES = 6
 
 # Only show articles published within this many hours (filters out old/stale news)
 TIME_WINDOW_HOURS = 36
@@ -79,8 +101,8 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "PASTE_YOUR_REAL_GEMINI_KEY_HE
 
 # Only analyze the top N articles per keyword with AI, to control cost/time
 # and to stay under Gemini's free-tier rate limit (kept low on purpose -
-# with 15 keywords, this gives up to 30 AI-analyzed articles total)
-MAX_ARTICLES_TO_ANALYZE = 2
+# with 28 keywords total across all scopes, this gives up to 28 AI-analyzed articles)
+MAX_ARTICLES_TO_ANALYZE = 1
 
 # Filename for the generated website page (used by GitHub Pages)
 OUTPUT_HTML_FILE = "index.html"
@@ -226,48 +248,65 @@ def analyze_and_sort_articles(articles):
 
 
 
-def build_html_page(results_by_keyword_analyzed):
-    """Build a static HTML page showing today's news, ranked by urgency, with AI analysis."""
+def build_html_page(results_by_scope):
+    """Build a static HTML page showing today's news, grouped by scope
+    (District -> State -> National -> Global), then by keyword within each,
+    ranked by urgency, with AI analysis."""
     updated_at = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
     urgency_colors = {"High": "#dc2626", "Medium": "#d97706", "Low": "#16a34a", "Unranked": "#6b7280"}
 
-    sections_html = []
-    for keyword, analyzed in results_by_keyword_analyzed.items():
-        cards = []
-        if not analyzed:
-            cards.append('<p class="empty">No new articles found today.</p>')
-        for a in analyzed:
-            color = urgency_colors.get(a["urgency"], "#6b7280")
-            badge = (
-                f'<span class="badge" style="background:{color}">{html_lib.escape(a["urgency"].upper())}</span>'
-                if a["urgency"] != "Unranked" else ""
-            )
-            analysis_html = (
-                f'<p class="analysis">{html_lib.escape(a["analysis"])}</p>' if a["analysis"] else ""
-            )
-            published_str = ""
-            if a.get("pub_date"):
-                try:
-                    dt = parsedate_to_datetime(a["pub_date"])
-                    published_str = dt.strftime("%d %b, %I:%M %p")
-                except Exception:
-                    published_str = ""
-            source_line = html_lib.escape(a["source"])
-            if published_str:
-                source_line += f" &middot; {html_lib.escape(published_str)}"
-            cards.append(f'''
-            <div class="card">
-              {badge}
-              <h3><a href="{html_lib.escape(a["link"])}" target="_blank" rel="noopener">{html_lib.escape(a["title"])}</a></h3>
-              <p class="source">{source_line}</p>
-              {analysis_html}
-            </div>''')
+    nav_links = []
+    scope_blocks = []
 
-        sections_html.append(f'''
-        <section>
-          <h2>{html_lib.escape(keyword)}</h2>
-          <div class="grid">{"".join(cards)}</div>
-        </section>''')
+    for scope, results_by_keyword in results_by_scope.items():
+        scope_id = html_lib.escape(scope.lower().replace(" ", "-").replace("(", "").replace(")", ""))
+        nav_links.append(f'<a href="#{scope_id}">{html_lib.escape(scope)}</a>')
+
+        sections_html = []
+        for keyword, analyzed in results_by_keyword.items():
+            cards = []
+            if not analyzed:
+                cards.append('<p class="empty">No new articles found today.</p>')
+            for a in analyzed:
+                color = urgency_colors.get(a["urgency"], "#6b7280")
+                badge = (
+                    f'<span class="badge" style="background:{color}">{html_lib.escape(a["urgency"].upper())}</span>'
+                    if a["urgency"] != "Unranked" else ""
+                )
+                analysis_html = (
+                    f'<p class="analysis">{html_lib.escape(a["analysis"])}</p>' if a["analysis"] else ""
+                )
+                published_str = ""
+                if a.get("pub_date"):
+                    try:
+                        dt = parsedate_to_datetime(a["pub_date"])
+                        published_str = dt.strftime("%d %b, %I:%M %p")
+                    except Exception:
+                        published_str = ""
+                source_line = html_lib.escape(a["source"])
+                if published_str:
+                    source_line += f" &middot; {html_lib.escape(published_str)}"
+                cards.append(f'''
+                <div class="card">
+                  {badge}
+                  <h3><a href="{html_lib.escape(a["link"])}" target="_blank" rel="noopener">{html_lib.escape(a["title"])}</a></h3>
+                  <p class="source">{source_line}</p>
+                  {analysis_html}
+                </div>''')
+
+            sections_html.append(f'''
+            <section>
+              <h3 class="keyword-heading">{html_lib.escape(keyword)}</h3>
+              <div class="grid">{"".join(cards)}</div>
+            </section>''')
+
+        scope_blocks.append(f'''
+        <div class="scope-block" id="{scope_id}">
+          <h2 class="scope-heading">{html_lib.escape(scope)}</h2>
+          {"".join(sections_html)}
+        </div>''')
+
+    nav_html = " &nbsp;|&nbsp; ".join(nav_links)
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -280,9 +319,14 @@ def build_html_page(results_by_keyword_analyzed):
   header {{ background:#1e293b; color:#fff; padding:28px 20px; text-align:center; }}
   header h1 {{ margin:0 0 6px; font-size:1.6rem; }}
   header p {{ margin:0; color:#94a3b8; font-size:0.9rem; }}
+  nav {{ background:#0f172a; text-align:center; padding:12px; font-size:0.9rem; }}
+  nav a {{ color:#93c5fd; text-decoration:none; font-weight:600; }}
+  nav a:hover {{ text-decoration:underline; }}
   main {{ max-width:1000px; margin:0 auto; padding:24px 20px; }}
-  section {{ margin-bottom:36px; }}
-  section h2 {{ font-size:1.2rem; border-bottom:2px solid #e2e8f0; padding-bottom:8px; }}
+  .scope-block {{ margin-bottom:48px; scroll-margin-top:16px; }}
+  .scope-heading {{ font-size:1.5rem; background:#1e293b; color:#fff; padding:10px 16px; border-radius:8px; margin-bottom:8px; }}
+  section {{ margin-bottom:30px; margin-top:20px; }}
+  .keyword-heading {{ font-size:1.05rem; color:#334155; border-bottom:2px solid #e2e8f0; padding-bottom:8px; }}
   .grid {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:16px; margin-top:14px; }}
   .card {{ background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px; position:relative; }}
   .card h3 {{ margin:8px 0 4px; font-size:1rem; line-height:1.4; }}
@@ -299,25 +343,28 @@ def build_html_page(results_by_keyword_analyzed):
   <h1>EC NEWS</h1>
   <p>Last updated: {updated_at} &middot; refreshes daily at 3pm IST</p>
 </header>
+<nav>{nav_html}</nav>
 <main>
-{"".join(sections_html)}
+{"".join(scope_blocks)}
 </main>
 </body>
 </html>'''
 
 
 def main():
-    results_by_keyword_analyzed = {}
-    for keyword in KEYWORDS:
-        try:
-            articles = fetch_news_for_keyword(keyword)
-            results_by_keyword_analyzed[keyword] = analyze_and_sort_articles(articles)
-        except Exception as e:
-            results_by_keyword_analyzed[keyword] = []
-            print(f"Error fetching news for '{keyword}': {e}")
-        time.sleep(3)  # small pause between keywords to avoid Google News rate limiting
+    results_by_scope = {}
+    for scope, keywords in KEYWORDS_BY_SCOPE.items():
+        results_by_scope[scope] = {}
+        for keyword in keywords:
+            try:
+                articles = fetch_news_for_keyword(keyword)
+                results_by_scope[scope][keyword] = analyze_and_sort_articles(articles)
+            except Exception as e:
+                results_by_scope[scope][keyword] = []
+                print(f"Error fetching news for '{keyword}': {e}")
+            time.sleep(3)  # small pause between keywords to avoid Google News rate limiting
 
-    html_page = build_html_page(results_by_keyword_analyzed)
+    html_page = build_html_page(results_by_scope)
     with open(OUTPUT_HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html_page)
     print(f"Website page written to {OUTPUT_HTML_FILE}")
